@@ -1,0 +1,138 @@
+//////////////////////////////////////////
+
+//valiables
+
+//include by style.scss
+
+//////////////////////////////////////////
+
+%gradation{
+	// @include background-image( linear-gradient( to right, $blue, $green ) );	
+}
+
+
+//////////
+
+// path
+
+//////////
+
+// $img : "img";
+// $js : "js";
+// $icon : "#{$fonts}/icomoon/fonts";
+
+
+
+//////////
+
+// fonts
+
+//////////
+
+$fontFamily :'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3',sans-serif;
+$fontFamily_en : Roboto, sans-serif;
+
+
+$basefontColor : $basefontColor;
+$basefontSize : 1rem;
+$baselineHeight : 2;
+
+$fontsize_text: 1.5em;
+
+
+
+//////////////////////
+
+// layouts 
+
+/////////////////////
+
+//column
+$innerWidth: 1040px;
+$outerWidth:1200px;
+
+//margin / padding
+$space_s : 40px;
+$space_m : $space_s*1.5;
+$space_l : $space_m*2;
+
+$space_s_sp : 40px;
+$space_m_sp : $space_s_sp*1.5;
+$space_l_sp : $space_s_sp*2.5;
+
+
+
+//////////////////////
+
+// fonts
+
+/////////////////////
+$fontsize_s		: #{( 12 / 15)}em;
+$fontsize_m		: #{( 20 / 15)}em;
+$fontsize_m_sp	: #{( 16 / 13)}em;
+$fontsize_l		: #{( 34 / 15)}em;
+$fontsize_l_sp	: #{( 20 / 13)}em;
+$fontsize_xl	: #{( 36 / 15)}em;
+$fontsize_xl_sp	: #{( 30 / 13)}em;
+$fontsize_xl_en	: #{( 110 / 15)}em;
+$fontsize_xl_en_sp	: #{( 50 / 13)}em;
+
+$fontsize_index_s : $fontsize_m;
+$fontsize_index_m : $fontsize_l;
+$fontsize_index_l : $fontsize_xl;
+$fontsize_index_en : $fontsize_xl_en;
+
+$fontsize_index_s_sp : $fontsize_m_sp;
+$fontsize_index_m_sp : $fontsize_l_sp;
+$fontsize_index_l_sp : $fontsize_xl_sp;
+
+// $fontsize_attention
+// $fontsize_title
+
+
+
+//////////////////////
+
+// property
+
+/////////////////////
+$radius: 5px;
+
+
+//////////////////////
+
+// responsive 
+
+/////////////////////
+
+////////breakpoint
+// $bpSmp : 480px;
+$bpSmp : 640px;
+$bpTab : 780px;
+$bpPc : 1366px;
+
+
+/////
+// 高さを計算する（概算値
+// $height
+//
+@function heightCalc( $mediaType, $height, $rate: 1.78 ){
+	@if ($mediaType == pc ){
+		@return floor($height / $rate);	
+	} @else {
+		@return floor($height * $rate);	
+	}
+}
+
+$bpSmpMax-width : "max-width : #{$bpSmp}";
+$bpSmpMin-width : "min-width : #{$bpSmp}";
+$bpTabMax-width : "max-width : #{$bpTab}";
+$bpTabMin-width : "min-width : #{$bpTab}";
+$bpPcMax-width: "max-width : #{$bpPc}";
+$bpPcMin-width: "min-width : #{$bpPc}";
+
+$bpSmpMax-height : "max-height :" + heightCalc(sp, $bpSmp);
+$bpSmpMin-height : "min-height :" + heightCalc(sp, $bpSmp);
+$bpTabMax-height : "max-height :" + heightCalc(tabl, $bpTab);
+$bpTabMin-height : "min-height :" + heightCalc(tabl, $bpTab);
+$bpPcMax-height: "max-height :" + heightCalc( pc, $bpPc);

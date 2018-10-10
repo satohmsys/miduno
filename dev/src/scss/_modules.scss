@@ -1,0 +1,313 @@
+//////////////////////////////////////////
+
+//module
+
+//include by style.scss
+
+//////////////////////////////////////////
+
+
+body{
+	position: relative;
+}
+
+
+
+////////////////////
+
+// header
+
+////////////////////
+
+/////// ヘッダー ラッパー
+.siteHeader
+{
+	padding-top: 70px;
+	padding-bottom: 70px;
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	right: 0;
+	left: 0;
+	transition: transition();
+	
+	
+	@at-root .-isScrolled .siteHeader{
+		padding-top: 30px;
+		padding-bottom: 30px;
+		background-color: #ffffff;
+	}
+	
+	@include mq( tab ){
+		padding-top: 20px;
+		padding-bottom: 20px;
+		position: absolute;
+
+		@at-root .-isScrolled .siteHeader{
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+	}
+	@include mq( sp ){
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		@at-root .-isScrolled .siteHeader{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}		
+	
+	
+	
+	
+	 > .wrap{
+		 display: flex;
+		 flex-direction: row;
+		 justify-content: space-between;
+		 align-items: center;
+		 
+		 @include mq( pc ){
+			 max-width: $outerWidth;
+		} 			 
+		
+		@include mq( tab ){
+			flex-direction: column;
+		} 	
+	 }
+
+	&__logo{
+
+		@include mq( tab ){
+			img{
+				max-width: 120px;
+			}
+		}	
+		@include mq( sp ){
+			img{
+				max-width: 90px;
+			}
+		}					
+	}
+
+	&__nav{
+
+		line-height: 1;
+		font-family: $fontFamily_en;
+
+		@include mq( tab ){
+			padding-top: 40px;
+			padding-bottom: 40px;
+			transition: transition();
+			position: fixed;
+			z-index: 9;
+			right: 0;
+			bottom: -100vh;
+			left: 0;
+			pointer-events:none;
+			background-color: rgba( #fff, 0.9 );
+
+
+			@at-root .-is-navOpen .siteHeader__nav{
+				bottom: 20px;
+				pointer-events: all;
+			}
+		}
+
+
+
+		ul{
+			display: flex;
+			flex-direction: row;
+
+			@include mq( tab ){
+				flex-direction: column;
+			}
+		}	
+				
+		li{
+			list-style: none;
+			
+
+			@include mq( tab ){
+				font-size: 1em;
+			}	
+
+
+			&:not( :last-child ){
+				margin-right: 40px;
+
+				@include mq( 1366){
+					margin-right: 25px;
+				}		
+
+				@include mq( tab ){
+					margin-right: 0;
+				}								
+			}
+		}
+
+		li a.active{
+			font-weight: bold;	
+					
+			&:before{
+				width: 99%;
+				left: -1px;
+			}					
+		}
+		li a,
+		li span{
+			color: inherit;		
+			position: relative;
+			cursor: pointer;
+			
+			&:before{
+			}	
+
+			@include mq( tab ){
+				padding-top: 1em;
+				padding-bottom: 1em;
+				padding-left: 1em;
+				display: block;
+				border-top: 1px solid $color_border;
+			}
+			@include mq( tab, min ){
+				@include mouseOver(){
+					opacity: 0.75;
+				}				
+			}
+		}		
+			
+	}
+}
+
+
+////////// mobile toggle
+
+.navToggle{
+	@include mq( tab ){
+		width: 100%;
+		height: 60px;
+		padding: 20px;
+		box-sizing: border-box;
+		position: fixed;
+		z-index: 9;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+		display: block;
+
+
+		&__text{
+			width: 5em;
+			height: 1em;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+			overflow: hidden;
+			position: relative;
+			text-align: center;
+
+
+			&:before,
+			&:after{
+				width: 100%;
+				line-height: 1;
+				display: block;
+				position: absolute;
+				transition: transition();
+				text-align: center;
+				color: #ffffff;
+				font-weight: 900;
+			}
+
+			&:before{
+				content: "MENU";
+				top: 0;
+			}
+			@at-root .-is-navOpen .navToggle__text:before{
+				top: -1.25em;
+			}
+
+			&:after{
+				content: "CLOSE";
+				// opacity: 0;
+				top: 1.25em;
+			}
+			@at-root .-is-navOpen .navToggle__text:after{
+				top: 0;
+			}
+		}
+	}
+}
+
+
+
+////////////////////
+
+// footer
+
+////////////////////
+
+.siteFooter{
+	padding-top: 50px;
+	padding-bottom: 70px;
+	background-color: #f2f2f2;
+
+	@include mq( tab ){
+		margin-top: $space_l_sp;
+	}
+
+	a{
+		color: inherit;
+	}
+
+	.wrap{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between
+	}
+
+	&__copy{
+	}
+	
+	&__nav{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		&__logo{
+			margin-right: 50px;
+		}
+
+		ul{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;			
+		}
+
+		li{
+			list-style: none;
+
+			&:not( :last-child ){
+				margin-right: $space_s;
+			
+				@include mq( tab ){
+					margin-right: 0;
+					margin-bottom: 20px;
+				}					
+			}
+		}
+	}
+
+
+	&__copyright{
+		margin-left: auto;
+		font-size: $fontsize_s;
+	}
+}
+
+

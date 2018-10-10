@@ -1,0 +1,21 @@
+<% 
+	include( '_include/_function.ejs' );
+	$path = './';
+	$active = 'top';
+%>
+<!DOCTYPE html>
+<html>
+<%- include( '_include/head.ejs' ); %>
+<body class="top">
+	<%- include( '_include/header.ejs' ); %>
+	<section class="mv">
+		<h2 class="mv__copy wrap">
+			価値あるリユースで、経済の循環を。
+		</h2>
+		<div class="mv__imgs">
+			<div><img src="<%- $path %>../img/mv-1.jpg" alt=""></div>
+		</div>
+	</section>
+	<%- include( '_include/footer.ejs' ); %>
+</body>
+</html>

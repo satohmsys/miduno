@@ -1,0 +1,63 @@
+@import "colors.scss";
+@import "variables.scss";
+@import "fonts.scss";
+@import "mixins.scss";
+@import "./../../node_modules/slick-carousel/slick/slick";
+////////////////////////////////////////
+
+
+// top
+
+
+////////////////////////////////////////
+.top{
+
+///////////////////////////////////////
+
+// nodule
+
+////////////////////////////////////////
+
+
+///////////////////////////////////////
+
+// style
+
+////////////////////////////////////////
+
+
+.mv{
+
+    position: relative;
+
+    &__copy{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: $fontsize_index_l;
+        color: #ffffff;
+        z-index: 9;
+        font-weight: bold;
+        letter-spacing: 0.18em;
+        font-feature-settings: "palt"
+    }
+    
+
+    &__imgs{
+        img{
+
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+}
