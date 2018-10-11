@@ -15,7 +15,7 @@
 //////////////////
 
 %inner{
-	max-width: 860px;
+	max-width: 1000px;
 	// margin-left: auto;
 	// margin-right: auto;
 	box-sizing: border-box;
@@ -28,14 +28,10 @@
 	margin-right: auto;	
 	// box-sizing: border-box;
 	
-	&.-paragraph{
-		max-width: 600px;
-	}
 	
 	@include mq( tab ){
-			padding-left: 5%;
-			padding-right: 5%;
-	}//max 580	
+		max-width: percentage( 670 / 750 );
+	}	
 }
 
 .contain{
@@ -44,6 +40,9 @@
 
 .inner{
 	@extend %inner;
+	@include mq( tab ){
+		max-width: percentage( 670 / 750 );
+	}	
 }
 
 

@@ -132,18 +132,27 @@ if ($loadingAnim.length ) {
 /**
  * smooth scroll
  */
-$('a[href^="#"]').click(function (e) {
+$('a[href^="#"]').click(function ( e ) {
 	e.stopPropagation();
 	e.preventDefault();
 
 	var speed = 500,
 		href = $(this).attr("href"),
 		target = $(href == "#" || href == "" ? 'html' : href),
-		position = target.offset().top - $('.siteHeader__logo').height() * 1.5;
+		position = target.offset().top - $('.siteHeader' ).height();
 
 	$("html, body").animate({ scrollTop: position }, speed, "swing");
 	return false;
 });
+$( '.scrollTop' ).on( 'click', function( e ){
+	e.stopPropagation();
+	e.preventDefault();
+
+	$( 'body,html' ).animate({
+		scrollTop: 0
+	}, 500, 'swing')
+
+} )
 
 
 export { $ };

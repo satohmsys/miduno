@@ -5,3 +5,25 @@
 //include by style.scss
 
 //////////////////////////////////////////
+
+@keyframes scrollbar{
+    0%{
+        top: 0;
+        height: 0px;
+    }
+    25%{
+        height: 100%;
+    }
+    50%{
+        top: auto;
+        bottom: 0;
+    }
+    75%{
+        height: 0;
+    }    
+    100%{
+        top: 0;
+        bottom: auto;
+        height: 0;
+    }
+}

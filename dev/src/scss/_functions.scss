@@ -36,7 +36,7 @@
 // @param @content CSS properties
 //
 
-@function transition( $prop:all, $s:0.4s ){
+@function transition( $prop:all, $s:0.25s ){
 	@return easeInOutCirc($prop, $s);
 	// @return easeInOutCirc($prop, $s);
 }

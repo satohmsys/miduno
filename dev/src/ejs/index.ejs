@@ -10,27 +10,35 @@
 	<%- include( '_include/header.ejs' ); %>
 	<section class="mv">
 		<h2 class="mv__copy wrap">
-			価値あるリユースで、経済の循環を。
+			価値あるリユースで、<br class="-only-sp">経済の循環を。
 		</h2>
 		<div class="mv__imgs">
-			<div><img src="<%- $path %>../img/mv-1.jpg" alt=""></div>
+			<div><img src="<%- $path %>../img/mv-1.jpg" srcset="/assets/img/_sp/mv-1.jpg 480w, /assets/img/mv-1.jpg" alt=""></div>
+			<div><img src="<%- $path %>../img/mv-2.jpg" srcset="/assets/img/_sp/mv-2.jpg 480w, /assets/img/mv-2.jpg" alt=""></div>
+			<div><img src="<%- $path %>../img/mv-3.jpg" srcset="/assets/img/_sp/mv-3.jpg 480w, /assets/img/mv-3.jpg" alt=""></div>
+			<div><img src="<%- $path %>../img/mv-4.jpg" srcset="/assets/img/_sp/mv-4.jpg 480w, /assets/img/mv-4.jpg" alt=""></div>
+			<div><img src="<%- $path %>../img/mv-5.jpg" srcset="/assets/img/_sp/mv-5.jpg 480w, /assets/img/mv-5.jpg" alt=""></div>
+		</div>
+		<div class="scrollBottom">
+			<span class="scrollBottom__text">SCROLL</span>
+			<i class="scrollBottom__line"></i>
 		</div>
 	</section>
 	<main>
 		<!-- ***** about -->
-		<section class="section section--catetory section--about">
+		<section id="about" class="section section--catetory section--about">
 			<header class="section__index js-effect">
 				<span class="mask"><span class="mask__element">ABOUT</span></span>
 			</header>
 			<div class="js-effect">
 				<section class="section__mv">
 					<div class="mask">
-						<figure class="section__mv mask__element">
-							<img src="<%- $path %>../img/about-img.jpg" alt="">
+						<figure class="section__mv__img mask__element">
+							<img src="<%- $path %>../img/about-img.jpg" srcset="/assets/img/_sp/about-img.jpg 468w, /assets/img/about-img.jpg" alt="">
 						</figure>
 					</div>
-					<section class="section__mvText">
-						<h3 class="section__mvText__index">
+					<section class="section__mv__text">
+						<h3 class="section__mv__text__index">
 							<span class="mask">
 								<span class="mask__element">
 									価値あるモノが継承されていく、<br>
@@ -38,7 +46,7 @@
 								</span>
 							</span>
 						</h3>
-						<div class="section__mvText__content mask">
+						<div class="section__mv__text__content mask">
 							<p class="mask__element">
 								これだけモノに溢れた現代において、<br>
 								本物の価値に出会うことは幸せなことだと思う。<br>
@@ -56,11 +64,11 @@
 				<!-- *** minds -->
 				<section class="minds">
 					<div class="wrap">
-						<section class="mind--main js-effect">
-							<h2 class="mind--main__index mask">
+						<section class="mind mind--main js-effect">
+							<h2 class="mind__index mask">
 								<span class="mask__element">自分にも、家族にも、誇れる会社を。</span>
 							</h2>
-							<div class="mind--main__content mask">
+							<div class="mind__content mask">
 								<p class="mask__element">
 									多様な働き方がある現代において、仕事は自己実現の手段にもなってきています。<br>
 									自分の仕事・働く会社について、友人や家族、そして我が子に胸を張って語れるだろうか？<br>
@@ -69,27 +77,27 @@
 								</p>
 							</div>
 						</section>
-						<section class="mind--sub js-effect">
-							<header class="mind--main__index mask">
+						<section class="mind mind--sub js-effect">
+							<header class="mind__index mask">
 								<span class="mask__element">VISION</span>
 							</header>
-							<div class="mind--main__content mask">
+							<div class="mind__content mask">
 								<span class="mask__element">価値あるモノが継承される循環型の社会。</span>
 							</div>
 						</section>
-						<section class="mind--sub js-effect">
-							<header class="mind--main__index mask">
+						<section class="mind mind--sub js-effect">
+							<header class="mind__index mask">
 								<span class="mask__element">MISSION</span>
 							</header>
-							<div class="mind--main__content mask">
+							<div class="mind__content mask">
 								<span class="mask__element">リユースをより身近に、イメージの一新を。</span>
 							</div>
 						</section>
-						<section class="mind--sub js-effect">
-							<header class="mind--main__index mask">
+						<section class="mind mind--sub js-effect">
+							<header class="mind__index mask">
 								<span class="mask__element">VALUE</span>
 							</header>
-							<div class="mind--main__content mask">
+							<div class="mind__content mask">
 								<span class="mask__element">本物との出会いを、お客様の日常に。</span>
 							</div>
 						</section>
@@ -99,141 +107,155 @@
 				<!-- *** message -->
 				<section class="message">
 					<section class="message__main">
-						<section class="message__text">
-							<header class="message__text__index js-effect">
-								<span class="mask"><span class="mask__element">MESSAGE</span></span>
-							</header>
-							<div class="message__text__content js-effect mask">
-								<div class="mask__element">
-									<p>
-										貴金属やブランド品など、価値あるモノは我々の生活に豊かさを与えてくれます。それを手にする方法としてリユースがあります。しかし、不要になった物を売り、買うというサイクルにまだまだ抵抗を感じる人がいるのも事実です。リユースは、物が持つストーリーを継承し、世の中を循環させてくものだと考えています。
-										リユースのネガティブな印象を一新していき、価値ある物がより多くの人に届くよう、我々はリユースのある日常づくりを目指しています。そして、リユースによる日本の経済の循環と、みなさまの生活に豊かさを提供できることを願っています。
-									</p>
-									<p class="">
-										<span class="message__text__div">株式会社水野　代表取締役</span>
-										<span class="message__text__name">水野 政行</span>
-									</p>
+						<div class="wrap">
+							<section class="message__text">
+								<header class="message__text__index js-effect">
+									<span class="mask"><span class="mask__element">MESSAGE</span></span>
+								</header>
+								<div class="message__text__content js-effect mask">
+									<div class="mask__element">
+										<p>
+											貴金属やブランド品など、価値あるモノは我々の生活に豊かさを与えてくれます。それを手にする方法としてリユースがあります。しかし、不要になった物を売り、買うというサイクルにまだまだ抵抗を感じる人がいるのも事実です。リユースは、物が持つストーリーを継承し、世の中を循環させてくものだと考えています。
+											リユースのネガティブな印象を一新していき、価値ある物がより多くの人に届くよう、我々はリユースのある日常づくりを目指しています。そして、リユースによる日本の経済の循環と、みなさまの生活に豊かさを提供できることを願っています。
+										</p>
+										<p class="">
+											<span class="message__text__div">株式会社水野　代表取締役</span>
+											<span class="message__text__name">水野 政行</span>
+										</p>
+									</div>
 								</div>
+							</section>
+							<div class="message__img js-effect mask">
+								<figure class="mask__element">
+									<img src="<%- $path %>../img/about-message-img.jpg" alt="">
+								</figure>
 							</div>
-						</section>
-						<div class="js-effect mask">
-							<figure class="mask__element">
-								<img src="<%- $path %>../img/about-message-img.jpg" alt="">
-							</figure>
 						</div>
 					</section>
 					<!-- * 売上推移 -->
 					<section class="chart">
-						<h3 class="chart__index">
-							<span>売り上げの過去遷移</span>
-						</h3>
-						<figure class="">
-							<img src="<%- $path %>../img/about-sell-chart.png" alt="">
-						</figure>
+						<div class="wrap">
+							<h3 class="chart__index">
+								<span>売り上げの過去遷移</span>
+							</h3>
+							<figure class="">
+								<img src="<%- $path %>../img/about-sell-chart.png" alt="">
+							</figure>
+						</div>
 					</section>
 					<!-- /// -->
 					<!-- * 遠隔 -->
 					<section class="history">
-						<h3 class="history__index">
-							<span>沿革</span>
-						</h3>
-						<ul class="history__list">
-							<li class="history__list__event">
-								<div class="history__list__event__then">
-									<div class="history__list__event__date">
-										2008年9月
+						<div class="wrap">
+							<h3 class="history__index">
+								<span>沿革</span>
+							</h3>
+							<ul class="history__list">
+								<li class="history__list__event">
+									<div class="history__list__event__then">
+										<div class="history__list__event__date">
+											2008年9月
+										</div>
+										<div class="history__list__event__text">
+											個人事業主として創業<br>
+											おたからや梅田店オープン
+										</div>
 									</div>
-									<div class="history__list__event__text">
-										個人事業主として創業<br>
-										おたからや梅田店オープン
+									<div class="history__list__event__images">
+										<figure class="history__list__event__image">
+											<img src="<%- $path %>../img/about-history-2008.jpg" alt="">
+										</figure>
+										<figure class="history__list__event__image">
+											<img src="<%- $path %>../img/about-history-2008-2.jpg" alt="">
+										</figure>
 									</div>
-								</div>
-								<div class="history__list__event__images">
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008.jpg" alt="">
-									</figure>
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008-2.jpg" alt="">
-									</figure>
-								</div>
-							</li>
-							<li class="history__list__event">
-								<div class="history__list__event__then">
-									<div class="history__list__event__date">
-										2008年9月
+								</li>
+								<li class="history__list__event">
+									<div class="history__list__event__then">
+										<div class="history__list__event__date">
+											2009年7月
+										</div>
+										<div class="history__list__event__text">
+											株式会社水野設立<br>
+											楽天市場出店
+										</div>
 									</div>
-									<div class="history__list__event__text">
-										個人事業主として創業<br>
-										おたからや梅田店オープン
+								</li>
+								<li class="history__list__event">
+									<div class="history__list__event__then">
+										<div class="history__list__event__date">
+											2011年X月
+										</div>
+										<div class="history__list__event__text">
+											Amazonジャパンにて出品開始
+										</div>
 									</div>
-								</div>
-								<div class="history__list__event__images">
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008.jpg" alt="">
-									</figure>
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008-2.jpg" alt="">
-									</figure>
-								</div>
-							</li>
-							<li class="history__list__event">
-								<div class="history__list__event__then">
-									<div class="history__list__event__date">
-										2008年9月
+								</li>
+								<li class="history__list__event">
+									<div class="history__list__event__then">
+										<div class="history__list__event__date">
+											2013年X月
+										</div>
+										<div class="history__list__event__text">
+											ebay、Rakuten Global Marketにて、海外販売開始</div>
 									</div>
-									<div class="history__list__event__text">
-										個人事業主として創業<br>
-										おたからや梅田店オープン
+								</li><li class="history__list__event">
+									<div class="history__list__event__then">
+										<div class="history__list__event__date">
+											2014年1月
+										</div>
+										<div class="history__list__event__text">
+											大阪市北区に本社移転
+										</div>
 									</div>
-								</div>
-								<div class="history__list__event__images">
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008.jpg" alt="">
-									</figure>
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008-2.jpg" alt="">
-									</figure>
-								</div>
-							</li>
-							<li class="history__list__event">
-								<div class="history__list__event__then">
-									<div class="history__list__event__date">
-										2008年9月
+									<div class="history__list__event__images">
+										<figure class="history__list__event__image">
+											<img src="<%- $path %>../img/about-history-2014.jpg" alt="">
+										</figure>
+										<figure class="history__list__event__image">
+											<img src="<%- $path %>../img/about-history-2014-2.jpg" alt="">
+										</figure>
 									</div>
-									<div class="history__list__event__text">
-										個人事業主として創業<br>
-										おたからや梅田店オープン
+								</li><li class="history__list__event">
+									<div class="history__list__event__then">
+										<div class="history__list__event__date">
+											2015年6月
+										</div>
+										<div class="history__list__event__text">
+											第7期 売上4億円達成
+										</div>
 									</div>
-								</div>
-								<div class="history__list__event__images">
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008.jpg" alt="">
-									</figure>
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008-2.jpg" alt="">
-									</figure>
-								</div>
-							</li>
-							<li class="history__list__event">
-								<div class="history__list__event__then">
-									<div class="history__list__event__date">
-										2008年9月
+								</li>
+								<li class="history__list__event">
+									<div class="history__list__event__then">
+										<div class="history__list__event__date">
+											2018年6月
+										</div>
+										<div class="history__list__event__text">
+											第9期 売上7億円達成
+										</div>
 									</div>
-									<div class="history__list__event__text">
-										個人事業主として創業<br>
-										おたからや梅田店オープン
+								</li>
+								<li class="history__list__event">
+									<div class="history__list__event__then">
+										<div class="history__list__event__date">
+											2018年10月
+										</div>
+										<div class="history__list__event__text">
+											東京銀座に出店
+										</div>
 									</div>
-								</div>
-								<div class="history__list__event__images">
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008.jpg" alt="">
-									</figure>
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008-2.jpg" alt="">
-									</figure>
-								</div>
-							</li>
-						</ul>
+									<div class="history__list__event__images">
+										<figure class="history__list__event__image">
+											<img src="<%- $path %>../img/about-history-2018.jpg" alt="">
+										</figure>
+										<figure class="history__list__event__image">
+											<img src="<%- $path %>../img/about-history-2018-2.jpg" alt="">
+										</figure>
+									</div>
+								</li>
+							</ul>
+						</div>
 					</section>
 					<!-- / -->
 				</section>
@@ -242,22 +264,22 @@
 		</section>
 		<!-- ///// -->
 		<!-- ***** service -->
-		<section class="section section--catetory section--service">
+		<section id="service" class="section section--catetory section--service">
 			<header class="section__index js-effect mask">
 				<span class="mask__element">SERVICE</span>
 			</header>
 			<div class="js-effect mask">
 				<section class="section__mv">
-					<figure class="section__mv mask__element">
-						<img src="<%- $path %>../img/service-img.jpg" alt="">
+					<figure class="section__mv__img mask__element">
+						<img src="<%- $path %>../img/service-img.jpg" srcset="/assets/img/_sp/service-img.jpg 468w, /assets/img/service-img.jpg" alt="">
 					</figure>
-					<section class="section__mvText">
-						<h3 class="section__mvText__index">
+					<section class="section__mv__text">
+						<h3 class="section__mv__text__index">
 							<span class="mask__element">
 								「いらない」と「ほしい」を結ぶ。
 							</span>
 						</h3>
-						<div class="section__mvText__content mask__element">
+						<div class="section__mv__text__content mask__element">
 							web×リアルを融合した買取ビジネスで、<br>
 							お客様の需要と供給を結ぶサービスを実現。<br>
 							厳選された本物を取り扱い継承していくことで、<br>
@@ -269,25 +291,25 @@
 			<div class="section__content">
 				<!-- *** business -->
 				<section class="business">
-					<div class="wrap">
+					<div class="inner">
 						<section class="business__main businessShowLayout js-effect">
-							<div class="businessShowLayout__text mask">
-								<div class="mask__element">
-									<h2 class="business__main__index">
-										買取ビジネス
-									</h2>
-									<h3 class="business__main__subindex">
-										厳選された本物のリユースをより身近に、<br>次の所有者へ継承していく。
-									</h3>
-									<div class="business__main__content">
-										買取ビジネスは、貴金属やブランド品、骨董品や硬貨・古銭など、お客様の「不要物」を価値あるものに換えていきます。確かな価値をもつ高価なモノに囲まれたリアル店舗で、お客様の「いらない」と「ほしい」を結んでいきます。
-									</div>
-								</div>
-							</div>
 							<div class="businessShowLayout__img mask">
 								<figure class="mask__element">
 									<img src="<%- $path %>../img/service-business-img.jpg" alt="">
 								</figure>
+							</div>
+							<div class="businessShowLayout__text mask">
+								<div class="mask__element">
+									<h2 class="businessShowLayout__index">
+										買取ビジネス
+									</h2>
+									<h3 class="businessShowLayout__subindex">
+										厳選された本物のリユースをより身近に、<br>次の所有者へ継承していく。
+									</h3>
+									<div class="businessShowLayout__content">
+										買取ビジネスは、貴金属やブランド品、骨董品や硬貨・古銭など、お客様の「不要物」を価値あるものに換えていきます。確かな価値をもつ高価なモノに囲まれたリアル店舗で、お客様の「いらない」と「ほしい」を結んでいきます。
+									</div>
+								</div>
 							</div>
 						</section>
 						<section>
@@ -298,13 +320,55 @@
 											「信頼の証」として、不正品排除を目的とした団体のAACD（日本流通自主管理協会）に加盟。
 										</h4>
 										<div class="business__detail__thing__text__content mask__element">
-												日本流通自主管理協会（略称AACD）は、並行輸入品市場での“偽造品”や“不正商品”の流通防止と排除を目指して1988年4月に発足した民間団体です。
-												私たちは消費者の皆様が安心して買い物ができる確かなブランド品市場を形成するために、関係諸機関・団体及び、関連企業等と連携をとり「協会」独自の商品取り扱い自主基準を定め、監視・管理システムを確立しお客様が安心してお買い物をお楽しみいただける環境作りに努めております。
+											日本流通自主管理協会（略称AACD）は、並行輸入品市場での“偽造品”や“不正商品”の流通防止と排除を目指して1988年4月に発足した民間団体です。
+											私たちは消費者の皆様が安心して買い物ができる確かなブランド品市場を形成するために、関係諸機関・団体及び、関連企業等と連携をとり「協会」独自の商品取り扱い自主基準を定め、監視・管理システムを確立しお客様が安心してお買い物をお楽しみいただける環境作りに努めております。
 										</div>
 									</div>
 									<div class="business__detail__thing__image mask__element">
 										<figure>
 											<img src="<%- $path %>../img/service-aacd-img.jpg" alt="">
+										</figure>
+									</div>
+								</li>
+								<li class="business__detail__thing js-effect mask">
+									<div class="business__detail__thing__text">
+										<h4 class="business__detail__thing__text__index mask__element">
+											JAPAN TAX FREE SHOP
+										</h4>
+										<div class="business__detail__thing__text__content mask__element">
+											<p>
+												当店は免税店となっております。外国人旅行者の方は 消費税8%免除でお買い物をお得に楽しんでいただけます。ぜひ、皆さんご一緒にお立ち寄りください。
+											</p>
+											<p>
+												※パスポートが必要です（コピー不可）合計で￥10,001（税抜）以上のお買い物が対象となります。
+											</p>
+										</div>
+									</div>
+									<div class="business__detail__thing__image mask__element">
+										<figure>
+											<img src="<%- $path %>../img/service-taxfree-img.jpg" alt="">
+										</figure>
+									</div>
+								</li>
+								<li class="business__detail__thing js-effect mask">
+									<div class="business__detail__thing__text">
+										<h4 class="business__detail__thing__text__index mask__element">
+											おたからや 6 銀座店
+										</h4>
+										<div class="business__detail__thing__text__content mask__element">
+											<p>
+												2018年10月より、東京都中央区銀座6丁目に「おたからや 6
+												銀座店」がオープンしました。高級ブランドのファッションアイテムをはじめ、美術品や骨董品など、高価な物を取り扱っています。銀座という土地にふさわしい、アンティークな空気が漂う上質で居心地の良い空間づくりを目指した店舗となっています。
+											</p>
+											<p>
+												〒104-0061 東京都中央区銀座６丁目XXXXXXXXXXXXXXX
+											</p>
+											<p><a href="" target="_blank">> Google Mapで見る</a></p>
+										</div>
+									</div>
+									<div class="business__detail__thing__image mask__element">
+										<figure>
+											<img src="<%- $path %>../img/service-otakara-img.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -320,13 +384,13 @@
 						</div>
 						<!-- *** 取り扱いブランド -->
 						<section class="business__brands">
-							.<h3 class="history__index">
+							<h3 class="business__brands__index">
 								<span>取り扱いブランド</span>
 							</h3>
-							<p class="history__subindex">
+							<p class="business__brands__subindex">
 								弊社でお取り扱いしているブランドの一部をご紹介しています。
 							</p>
-							<div class="history__content">
+							<div class="business__brands__content">
 								<ul class="brands">
 									<li class="brands__brandbox">
 										<img src="<%- $path %>../img/service-brand-logo-hermes.png" alt="">
@@ -367,7 +431,40 @@
 								</ul>
 								<div class="brands__imgs">
 									<div class="brands__img">
-										<img src="<%- $path %>../img/service-brand-lv.jpg" alt="">
+										<img src="<%- $path %>../img/service-brand-img-hermes.jpg" alt="">
+									</div>
+									<div class="brands__img">
+										<img src="<%- $path %>../img/service-brand-img-lv.jpg" alt="">
+									</div>
+									<div class="brands__img">
+										<img src="<%- $path %>../img/service-brand-img-chanel.jpg" alt="">
+									</div>
+									<div class="brands__img">
+										<img src="<%- $path %>../img/service-brand-img-gucci.jpg" alt="">
+									</div>
+									<div class="brands__img">
+										<img src="<%- $path %>../img/service-brand-img-prada.jpg" alt="">
+									</div>
+									<div class="brands__img">
+										<img src="<%- $path %>../img/service-brand-img-coach.jpg" alt="">
+									</div>
+									<div class="brands__img">
+										<img src="<%- $path %>../img/service-brand-img-cartier.jpg" alt="">
+									</div>
+									<div class="brands__img">
+										<img src="<%- $path %>../img/service-brand-img-bvlgari.jpg" alt="">
+									</div>
+									<div class="brands__img">
+										<img src="<%- $path %>../img/service-brand-img-tiffany.jpg" alt="">
+									</div>
+									<div class="brands__img">
+										<img src="<%- $path %>../img/service-brand-img-rolex.jpg" alt="">
+									</div>
+									<div class="brands__img">
+										<img src="<%- $path %>../img/service-brand-img-omega.jpg" alt="">
+									</div>
+									<div class="brands__img">
+										<img src="<%- $path %>../img/service-brand-img-burberrys.jpg" alt="">
 									</div>
 								</div>
 							</div>
@@ -376,24 +473,25 @@
 						<!-- *** 海外向け -->
 						<section class="business__oversea">
 							<section class="business__main businessShowLayout js-effect">
+								<div class="businessShowLayout__img mask">
+									<figure class="mask__element">
+										<img src="<%- $path %>../img/service-foreign-img.jpg" alt="">
+									</figure>
+								</div>
 								<div class="businessShowLayout__text mask">
 									<div class="mask__element">
-										<h2 class="business__main__index">
+										<h2 class="businessShowLayout__index">
 											海外向けネット事業
 										</h2>
-										<h3 class="business__main__subindex">
+										<h3 class="businessShowLayout__subindex">
 											ITを活用したグローバル展開で、<br>世界中のより多くの方に価値ある物を。
 										</h3>
-										<div class="business__main__content">
+										<div class="businessShowLayout__content">
 											ITを駆使することで世界とつながれる。世界中にも「いらない」「ほしい」のニーズがあり、相互を結んでいく事業を展開。世界TOPクラスの厳選されたブランド品を、ITを活用して世界中へ届けていくことで、リユースのグローバル規模へと。
 										</div>
 									</div>
 								</div>
-								<div class="businessShowLayout__img mask">
-									<figure class="mask__element">
-										<img src="<%- $path %>../img/service-business-img.jpg" alt="">
-									</figure>
-								</div>
+
 							</section>
 							<section>
 								<ul class="business__detail">
@@ -414,7 +512,7 @@
 										</div>
 									</li>
 								</ul>
-								<div class="business__oversea__images">
+								<div class="business__oversea__imgs">
 									<figure><img src="<% $path %>../img/service-foreign-img-1.jpg" alt=""></figure>
 									<figure><img src="<% $path %>../img/service-foreign-img-2.jpg" alt=""></figure>
 								</div>
@@ -423,160 +521,18 @@
 					</div>
 				</section>
 				<!-- /// -->
-				<!-- *** message -->
-				<section class="message">
-					<section class="message__main">
-						<section class="message__text">
-							<header class="message__text__index js-effect mask">
-								<span class="mask__element">MESSAGE</span>
-							</header>
-							<div class="message__text__content js-effect mask">
-								<div class="mask__element">
-									<p>
-										貴金属やブランド品など、価値あるモノは我々の生活に豊かさを与えてくれます。それを手にする方法としてリユースがあります。しかし、不要になった物を売り、買うというサイクルにまだまだ抵抗を感じる人がいるのも事実です。リユースは、物が持つストーリーを継承し、世の中を循環させてくものだと考えています。
-										リユースのネガティブな印象を一新していき、価値ある物がより多くの人に届くよう、我々はリユースのある日常づくりを目指しています。そして、リユースによる日本の経済の循環と、みなさまの生活に豊かさを提供できることを願っています。
-									</p>
-									<p class="">
-										<span class="message__text__div">株式会社水野　代表取締役</span>
-										<span class="message__text__name">水野 政行</span>
-									</p>
-								</div>
-							</div>
-						</section>
-						<div class="js-effect mask">
-							<figure class="mask__element">
-								<img src="<%- $path %>../img/about-message-img.jpg" alt="">
-							</figure>
-						</div>
-					</section>
-					<!-- * 売上推移 -->
-					<section class="chart">
-						<h3 class="chart__index">
-							<span>売り上げの過去遷移</span>
-						</h3>
-						<figure class="">
-							<img src="<%- $path %>../img/about-sell-chart.png" alt="">
-						</figure>
-					</section>
-					<!-- /// -->
-					<!-- * 遠隔 -->
-					<section class="history">
-						<h3 class="history__index">
-							<span>沿革</span>
-						</h3>
-						<ul class="history__list">
-							<li class="history__list__event">
-								<div class="history__list__event__then">
-									<div class="history__list__event__date">
-										2008年9月
-									</div>
-									<div class="history__list__event__text">
-										個人事業主として創業<br>
-										おたからや梅田店オープン
-									</div>
-								</div>
-								<div class="history__list__event__images">
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008.jpg" alt="">
-									</figure>
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008-2.jpg" alt="">
-									</figure>
-								</div>
-							</li>
-							<li class="history__list__event">
-								<div class="history__list__event__then">
-									<div class="history__list__event__date">
-										2008年9月
-									</div>
-									<div class="history__list__event__text">
-										個人事業主として創業<br>
-										おたからや梅田店オープン
-									</div>
-								</div>
-								<div class="history__list__event__images">
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008.jpg" alt="">
-									</figure>
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008-2.jpg" alt="">
-									</figure>
-								</div>
-							</li>
-							<li class="history__list__event">
-								<div class="history__list__event__then">
-									<div class="history__list__event__date">
-										2008年9月
-									</div>
-									<div class="history__list__event__text">
-										個人事業主として創業<br>
-										おたからや梅田店オープン
-									</div>
-								</div>
-								<div class="history__list__event__images">
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008.jpg" alt="">
-									</figure>
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008-2.jpg" alt="">
-									</figure>
-								</div>
-							</li>
-							<li class="history__list__event">
-								<div class="history__list__event__then">
-									<div class="history__list__event__date">
-										2008年9月
-									</div>
-									<div class="history__list__event__text">
-										個人事業主として創業<br>
-										おたからや梅田店オープン
-									</div>
-								</div>
-								<div class="history__list__event__images">
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008.jpg" alt="">
-									</figure>
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008-2.jpg" alt="">
-									</figure>
-								</div>
-							</li>
-							<li class="history__list__event">
-								<div class="history__list__event__then">
-									<div class="history__list__event__date">
-										2008年9月
-									</div>
-									<div class="history__list__event__text">
-										個人事業主として創業<br>
-										おたからや梅田店オープン
-									</div>
-								</div>
-								<div class="history__list__event__images">
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008.jpg" alt="">
-									</figure>
-									<figure class="history__list__event__image">
-										<img src="<%- $path %>../img/about-history-2008-2.jpg" alt="">
-									</figure>
-								</div>
-							</li>
-						</ul>
-					</section>
-					<!-- / -->
-				</section>
-				<!-- /// -->
 			</div>
 		</section>
 		<!-- ///// -->
 		<!-- ***** company -->
-		<section class="section section--catetory section--company">
+		<section id="company" class="section section--catetory section--company">
 			<header class="section__index js-effect mask">
 				<span class="mask__element">COMPANY</span>
 			</header>
 			<div class="js-effect mask">
 				<section class="section__mv">
-					<figure class="section__mv mask__element">
-						<img src="<%- $path %>../img/company-img.jpg" alt="">
+					<figure class="section__mv__img mask__element">
+						<img src="<%- $path %>../img/company-img.jpg" srcset="/assets/img/_sp/company-img.jpg 468w, /assets/img/company-img.jpg" alt="">
 					</figure>
 				</section>
 			</div>
@@ -613,7 +569,7 @@
 									</th>
 									<td>1,000万円</td>
 								</tr>
-					
+
 								<tr>
 									<th>
 										売上高
@@ -672,7 +628,8 @@
 										<a href="">Googe Mapで見る</a>
 									</div>
 								</div>
-								<div class="officeMap__map"></div>
+								<div class="officeMap__map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1063.44459708485!2d135.50366580884958!3d34.70236311891975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e5d07dc2ef50aed!2z44OZ44O844K544Kq44Oz44OI44OD44OXIOWkp-mYquaiheeUsOW6l--9nEJBU1MgT04gVE9Q!5e0!3m2!1sja!2sjp!4v1539230029097"
+								width="560" height="390" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 							</section>
 							<section class="officeMap">
 								<div class="officeMap__text">
@@ -688,7 +645,8 @@
 										<a href="">Googe Mapで見る</a>
 									</div>
 								</div>
-								<div class="officeMap__map"></div>
+								<div class="officeMap__map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1063.44459708485!2d135.50366580884958!3d34.70236311891975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e5d07dc2ef50aed!2z44OZ44O844K544Kq44Oz44OI44OD44OXIOWkp-mYquaiheeUsOW6l--9nEJBU1MgT04gVE9Q!5e0!3m2!1sja!2sjp!4v1539230029097"
+								width="560" height="390" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 							</section>
 						</div>
 					</section>
@@ -843,15 +801,15 @@
 										</li>
 									</ul>
 								</div>
-							</section>							
+							</section>
 						</div>
 					</section>
 				</div>
 			</div>
 		</section>
 		<!-- ///// -->
-		<!-- ***** company -->
-		<section class="section section--catetory section--recruit">
+		<!-- ***** recruit -->
+		<section id="recruit" class="section section--catetory section--recruit">
 			<header class="section__index ">
 				<span class="mask__element">RECRUIT</span>
 			</header>
@@ -871,7 +829,7 @@
 								<h4 class="recruitInfo__detail__index">
 									総合職(営業・販売・仕入)
 								</h4>
-								<div class="recruitInfo__detail__content">									
+								<div class="recruitInfo__detail__content">
 									<table class="companyInfo">
 										<tr>
 											<th>
@@ -886,11 +844,11 @@
 												勤務地
 											</th>
 											<td>
-										【大阪・大阪市エリア】 <br>
-										大阪市北区堂山町1-5 三共梅田ビル3階 <br>
-										大阪市中央区東心斎橋1-10-12 <br>
-										【東京・台東区エリア】 <br>
-										東京都台東区上野5-26-5　日清ビル5階
+												【大阪・大阪市エリア】 <br>
+												大阪市北区堂山町1-5 三共梅田ビル3階 <br>
+												大阪市中央区東心斎橋1-10-12 <br>
+												【東京・台東区エリア】 <br>
+												東京都台東区上野5-26-5　日清ビル5階
 											</td>
 										</tr>
 										<tr>
@@ -906,14 +864,14 @@
 												給与
 											</th>
 											<td>
-										月給：303,215円 <br>
-										【内訳】 <br>
-										基本給：200,000円 <br>
-										一律総合職手当：20,000円／固定残業代：83,215円<br>
-										※55時間分の固定残業代が含まれます。 残業が55時間を超えた場合、超過分を支給します。<br>
-										【対象学歴】 <br>
-										大卒・大学院卒・専門学校卒 <br>
-										※支給額は対象学歴一律です。
+												月給：303,215円 <br>
+												【内訳】 <br>
+												基本給：200,000円 <br>
+												一律総合職手当：20,000円／固定残業代：83,215円<br>
+												※55時間分の固定残業代が含まれます。 残業が55時間を超えた場合、超過分を支給します。<br>
+												【対象学歴】 <br>
+												大卒・大学院卒・専門学校卒 <br>
+												※支給額は対象学歴一律です。
 											</td>
 										</tr>
 										<tr>
@@ -921,9 +879,9 @@
 												諸手当
 											</th>
 											<td>
-										交通費支給（2万円まで／月） <br>
-										地域手当1万円（東京のみ） <br>
-										表彰制度（年間MVP・優秀賞・新人賞。祝い金を支給）
+												交通費支給（2万円まで／月） <br>
+												地域手当1万円（東京のみ） <br>
+												表彰制度（年間MVP・優秀賞・新人賞。祝い金を支給）
 											</td>
 										</tr>
 										<tr>
@@ -931,7 +889,7 @@
 												昇給
 											</th>
 											<td>
-										年1回　毎年12月に個人評価の見直しを行います。
+												年1回　毎年12月に個人評価の見直しを行います。
 											</td>
 										</tr>
 										<tr>
@@ -946,12 +904,12 @@
 												休日休暇
 											</th>
 											<td>
-										■総合職 <br>
-										月9回　シフト制※土日祝日をベースに休日を取得することも可能 <br>
-										夏季休暇4日・年末年始5日 <br>
-										その他休暇：慶弔休暇、有給休暇   <br>
-										★年間休日：117日★ <br>
-										※夏季休暇・年末年始休暇は会社カレンダーに準ずるものとします。 したがって、年度によっては各休暇日数が前後する場合があります。
+												■総合職 <br>
+												月9回　シフト制※土日祝日をベースに休日を取得することも可能 <br>
+												夏季休暇4日・年末年始5日 <br>
+												その他休暇：慶弔休暇、有給休暇 <br>
+												★年間休日：117日★ <br>
+												※夏季休暇・年末年始休暇は会社カレンダーに準ずるものとします。 したがって、年度によっては各休暇日数が前後する場合があります。
 											</td>
 										</tr>
 										<tr>
@@ -980,6 +938,7 @@
 									総合職(営業・販売・仕入)
 								</h4>
 								<div class="recruitInfo__detail__content">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quisquam, vel sed quasi, veritatis nemo esse fugiat natus deserunt quam nobis consequatur ea voluptatem itaque suscipit in laborum dicta rem.
 								</div>
 							</section>
 							<section class="recruitInfo__detail">
@@ -987,6 +946,7 @@
 									総合職(営業・販売・仕入)
 								</h4>
 								<div class="recruitInfo__detail__content">
+									kari
 								</div>
 							</section>
 							<section class="recruitInfo__detail">
@@ -994,6 +954,7 @@
 									総合職(営業・販売・仕入)
 								</h4>
 								<div class="recruitInfo__detail__content">
+									kari
 								</div>
 							</section>
 							<div class="button"><a href="">エントリー</a></div>

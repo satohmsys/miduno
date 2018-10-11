@@ -11,8 +11,8 @@ let config = merge( baseConfig, {
 
 	devServer: {
 		contentBase: vars.PATHS.devServer.contentBase,
-		hot: true,
-		inline: true,
+		// hot: true,
+		// inline: true,
 		compress: true,
 		open: true,
 		// port: 3000,

@@ -30,27 +30,43 @@ body{
 	transition: transition();
 	
 	
-	@at-root .-isScrolled .siteHeader{
-		background-color: #ffffff;
-	}
 	
-	@include mq( tab ){
-		position: absolute;
-
+	@include mq( tab,min ){
 		@at-root .-isScrolled .siteHeader{
-			padding-top: 20px;
-			padding-bottom: 20px;
+			background-color: #ffffff;
 		}
 	}
-	@include mq( sp ){
-		padding-top: 10px;
-		padding-bottom: 10px;
+	@include mq( tab ){
 
-		@at-root .-isScrolled .siteHeader{
-			padding-top: 10px;
-			padding-bottom: 10px;
+		//nav-background-color
+		&:after{
+			content: " ";
+			width: 100%;
+			height: 100%;
+			background-color: #ffffff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 8;
 		}
-	}		
+		&:before{
+			content: " ";
+			width: 0%;
+			height: 2px;
+			top: 58px;
+			background-color: $red;
+			position: absolute;
+			left: 0;
+			z-index: 9;
+			transition: transition();
+		}		
+
+		@at-root .-is-navOpen .siteHeader:before{
+			width: 100%;
+		}
+
+	}
 	
 	
 	
@@ -61,13 +77,10 @@ body{
 		 flex-direction: row;
 		 justify-content: space-between;
 		 align-items: center;
-		 
-		 @include mq( pc ){
-			 max-width: $outerWidth;
-		} 			 
 		
-		@include mq( tab ){
-			flex-direction: column;
+
+		@include mq( sp ){
+			height: 60px;
 		} 	
 	 }
 
@@ -75,6 +88,8 @@ body{
 		line-height: 1;
 
 		@include mq( tab ){
+			position: relative;
+			z-index: 9;
 			img{
 				max-width: 120px;
 			}
@@ -87,25 +102,26 @@ body{
 	}
 
 	&__nav{
-
+		margin-left: auto;
 		line-height: 1;
 		font-family: $fontFamily_en;
 
 		@include mq( tab ){
-			padding-top: 40px;
+			margin-left: 0;
 			padding-bottom: 40px;
 			transition: transition();
 			position: fixed;
-			z-index: 9;
+			z-index: 7;
 			right: 0;
-			bottom: -100vh;
+			top: -100vh;
 			left: 0;
 			pointer-events:none;
 			background-color: rgba( #fff, 0.9 );
 
 
 			@at-root .-is-navOpen .siteHeader__nav{
-				bottom: 20px;
+				height: 100%;
+				top: 60px;
 				pointer-events: all;
 			}
 		}
@@ -124,12 +140,7 @@ body{
 		li{
 			list-style: none;
 			
-
-			@include mq( tab ){
-				font-size: 1em;
-			}	
-
-
+			
 			&:not( :last-child ){
 				margin-right: 40px;
 
@@ -141,31 +152,63 @@ body{
 					margin-right: 0;
 				}								
 			}
+			@include mq( tab ){
+				border-top: 1px solid $color_border;	
+
+				&:last-child{
+					border-bottom: 1px solid $color_border;
+				}			
+			}
 		}
 
 		li a.active{
-			font-weight: bold;	
+			color: #ffffff;
+			background-color: $red;
 					
 			&:before{
-				width: 99%;
-				left: -1px;
+
 			}					
 		}
-		li a,
-		li span{
+
+
+		li a{
+			padding: 2px 3px;
 			color: inherit;		
 			position: relative;
 			cursor: pointer;
 			
-			&:before{
-			}	
 
 			@include mq( tab ){
-				padding-top: 1em;
-				padding-bottom: 1em;
-				padding-left: 1em;
+				max-width: percentage( 670 / 750 );				
+				margin-right: auto;
+				margin-left: auto;
+				padding-top: 2em;
+				padding-bottom: 2em;
 				display: block;
-				border-top: 1px solid $color_border;
+
+                &:before,
+                &:after{
+                    content:" "; 
+                    height: 1px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                    bottom: 0;
+                    background-color: $red;
+                    transition: transition();
+                }
+
+                &:before{
+                    width: 25px;
+                }
+                &:after{
+                    width: 10px;
+                    transform-origin: right center;
+                    transform: rotate( 30deg );
+                }				
+
 			}
 			@include mq( tab, min ){
 				@include mouseOver(){
@@ -182,59 +225,69 @@ body{
 
 .navToggle{
 	@include mq( tab ){
-		width: 100%;
+		width: 50px;
 		height: 60px;
-		padding: 20px;
-		box-sizing: border-box;
-		position: fixed;
-		z-index: 9;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		text-align: center;
+		position: relative;
 		display: block;
+		z-index: 9;
 
+		i{
+			width: 30px;
+			margin: auto;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
 
-		&__text{
-			width: 5em;
-			height: 1em;
-			margin-right: auto;
-			margin-left: auto;
-			display: block;
-			overflow: hidden;
-			position: relative;
-			text-align: center;
+			@at-root .-is-navOpen .navToggle i{
+				&,&:after{
+					width: 30px;
+					transform-origin: center center;
+				}
+				&{
+					transform: rotate( 45deg );
+				}
 
+				&:after{
+					top: 0;
+					transform: rotate( 90deg );
+				}
 
+				&:before{
+					width: 0;
+				}
+			}
+
+			&,
 			&:before,
 			&:after{
-				width: 100%;
-				line-height: 1;
-				display: block;
+				height: 2px;
 				position: absolute;
 				transition: transition();
-				text-align: center;
-				color: #ffffff;
-				font-weight: 900;
+				background-color: #cccccc;
+
+			}
+			&:before,
+			&:after{
+				content: " ";
+				right: 0;
 			}
 
 			&:before{
-				content: "MENU";
-				top: 0;
+				width: 35px;
+				top: -7px;
+				
 			}
-			@at-root .-is-navOpen .navToggle__text:before{
-				top: -1.25em;
+			&:after{
+				width: 25px;
+				top: 8px;
 			}
 
-			&:after{
-				content: "CLOSE";
-				// opacity: 0;
-				top: 1.25em;
-			}
-			@at-root .-is-navOpen .navToggle__text:after{
-				top: 0;
-			}
+
+
 		}
+
+		display: block;
 	}
 }
 
@@ -246,6 +299,77 @@ body{
 
 ////////////////////
 
+
+.scrollTop{
+	margin-top: 100px;
+	margin-bottom: 80px;
+	text-align: center;
+
+	@include mq( sp ){
+		margin-top: 70px;
+		margin-bottom: 70px;
+	}
+
+
+	&__line{
+		width: 1px;
+		height: 60px;
+		margin-right: auto;
+		margin-bottom: 20px;
+		margin-left: auto;
+		display: block;
+		position: relative;
+		background-color: $color_border;
+
+		@include mq( sp ){
+			height: 50px;
+		}		
+
+		
+		&:after{
+			content: " ";
+			width: 3px;
+			height: 30px;
+			margin-right: auto;
+			margin-left: auto;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: -1px;
+			display: block;
+			background-color: $navy;
+			transition: transition();
+			animation: scrollbar 2s linear 0s infinite reverse backwards;                
+
+		}
+	}
+
+	&__text{
+		font-weight: bold;
+		font-family: $fontFamily_en;
+
+		@include mq( sp ){
+			font-weight: normal;
+			font-size: 1.2rem;
+		}		
+
+		
+	}
+
+
+
+	@include mq( tab,min ){
+		@include mouseOver(){
+			cursor: pointer;
+			
+			&__line:after{
+				height: 0;
+			}
+		}
+	}
+
+}
+
 .siteFooter{
 	padding-top: 50px;
 	padding-bottom: 70px;
@@ -253,6 +377,8 @@ body{
 
 	@include mq( tab ){
 		margin-top: $space_l_sp;
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 
 	a{
@@ -263,7 +389,11 @@ body{
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: space-between
+		justify-content: space-between;
+
+		@include mq( sp ){
+			flex-direction: column;
+		}
 	}
 
 	&__copy{
@@ -274,8 +404,20 @@ body{
 		flex-direction: row;
 		align-items: center;
 
+		@include mq( sp ){
+			flex-direction: column;
+		}
+
+
 		&__logo{
+			line-height: 1;
 			margin-right: 50px;
+
+			@include mq( sp ){
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+
 		}
 
 		ul{
@@ -292,8 +434,7 @@ body{
 				margin-right: $space_s;
 			
 				@include mq( tab ){
-					margin-right: 0;
-					margin-bottom: 20px;
+					margin-right: 25px;
 				}					
 			}
 		}
@@ -303,6 +444,10 @@ body{
 	&__copyright{
 		margin-left: auto;
 		font-size: $fontsize_s;
+
+		@include mq( sp ){
+			margin-left: 0;
+		}		
 	}
 }
 
