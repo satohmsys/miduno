@@ -22,8 +22,6 @@ body{
 /////// ヘッダー ラッパー
 .siteHeader
 {
-	padding-top: 70px;
-	padding-bottom: 70px;
 	position: fixed;
 	z-index: 9;
 	top: 0;
@@ -33,14 +31,10 @@ body{
 	
 	
 	@at-root .-isScrolled .siteHeader{
-		padding-top: 30px;
-		padding-bottom: 30px;
 		background-color: #ffffff;
 	}
 	
 	@include mq( tab ){
-		padding-top: 20px;
-		padding-bottom: 20px;
 		position: absolute;
 
 		@at-root .-isScrolled .siteHeader{
@@ -62,6 +56,7 @@ body{
 	
 	
 	 > .wrap{
+		 height: 100px;
 		 display: flex;
 		 flex-direction: row;
 		 justify-content: space-between;
@@ -77,6 +72,7 @@ body{
 	 }
 
 	&__logo{
+		line-height: 1;
 
 		@include mq( tab ){
 			img{
