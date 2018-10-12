@@ -327,17 +327,17 @@ body{
 		&:after{
 			content: " ";
 			width: 3px;
-			height: 30px;
+			height: 0px;
 			margin-right: auto;
 			margin-left: auto;
 			position: absolute;
-			top: 0;
+			bottom: 0;
 			right: 0;
 			left: -1px;
 			display: block;
 			background-color: $navy;
 			transition: transition();
-			animation: scrollbar-bottom 2s ease 0s infinite reverse both;                
+			animation: scrollbar-bottom 2s ease-in 0s infinite normal both;                
 
 		}
 	}

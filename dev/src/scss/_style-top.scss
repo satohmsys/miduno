@@ -294,7 +294,7 @@ main .wrap{
                 background-color: #fff;
                 // transition: transition();
 
-                animation: scrollbar 2s ease 0s infinite reverse backwards;                
+                animation: scrollbar 2s ease-in 0s infinite normal backwards;                
             }
         }
 
@@ -862,9 +862,10 @@ main .wrap{
 
         &__imgs{
             margin-top: 40px;
-            margin-right: 90px;
-            margin-left: 90px;
+            padding-right: 90px;
+            padding-left: 90px;
             text-align: center;
+            overflow: hidden;
 
             @include mq( sp ){
                 margin-top: 0;
@@ -873,7 +874,6 @@ main .wrap{
                margin-left: -20px;
                padding-right: 20px;
                padding-left: 20px;
-               overflow: hidden;
             }
 
             //// slick
@@ -899,7 +899,7 @@ main .wrap{
 
 
                 &.slick-prev{
-                    left: -40px;
+                    left: 30px;
                     transform: rotate( -135deg );
 
                     @include mq( sp ){
@@ -907,7 +907,7 @@ main .wrap{
                     }                    
                 }
                 &.slick-next{
-                    right: -40px;
+                    right: 30px;
                     transform: rotate( 45deg );
 
                     @include mq( sp ){
@@ -972,7 +972,7 @@ main .wrap{
 
 /////////////////////////////
 
-///////// service
+///////// company
 
 /////////////////////////////
 
@@ -1326,62 +1326,241 @@ main .wrap{
 
 
         .button{
-            width: 245px;
-            position: relative;
-
-            @include mq( sp ){
-                margin-right: auto;
-                margin-left: auto;
-                margin-top: 50px;
-            }             
-            
             a{
-                padding: 10px 20px;
-                position: relative;
-                display: block;
                 color: #ffffff;
-                border: 1px solid;
-
                 &:before,
                 &:after{
-                    content:" "; 
-                    height: 1px;
-                    margin-top: auto;
-                    margin-bottom: auto;
-                    position: absolute;
-                    top: 0;
-                    right: 10px;
-                    bottom: 0;
                     background-color: #ffffff;
-                    transition: transition();
-                }
-
-                &:before{
-                    width: 25px;
-                }
-                &:after{
-                    width: 10px;
-                    transform-origin: right center;
-                    transform: rotate( 30deg );
                 }
 
 
+                @include mq( tab ){
+                    color: $navy;
+                    background-color: #ffffff;
+                    &:before,
+                    &:after{
+                        background-color: $navy;
+                    }
+                }
                 @include mq( tab, min ){
                     @include mouseOver(){
                         color: $navy;
                         background-color: #ffffff;
-
                         &:before,
                         &:after{
                             background-color: $navy;
                         }                        
                     }
                 }                
-
             }
         }
+    }
+}
 
 
+
+/////////////////////////////
+
+///////// contact
+
+/////////////////////////////
+
+
+.section--contact{
+
+    input[type="text"],
+    input[type="button"],
+    input[type="email"],
+    input[type="submit"],
+    textarea {
+        border-radius: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }    
+
+    //////// module
+    .section__index:after{
+        display: none;
+    }
+
+    .formTable__attention{
+        margin-top: 60px;
+        padding: 30px 90px;
+        font-size: 1.3rem;
+        border: 1px solid $color_border;
+
+        &__index{
+            line-height: 1;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    }
+
+    dl{
+        dt{
+            font-weight: bold;
+
+            &.must{
+                position: relative;
+
+                &:after{
+                    line-height: 1;
+                    content: "*";
+                    font-size: 1rem;
+                    color: $red;
+                    display: inline-block;
+                    vertical-align: text-top;
+                }
+            }
+        }
+        dd{
+            margin-left: 0;
+        }
+    }
+
+
+    input[ type="text" ],
+    input[ type="email" ],
+    input[ type="tel" ],
+    textarea{
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 1px solid $color_border;
+        padding: 1em 1em 1em 5px;
+
+        &::placeholder{
+            color: $color_border*0.85;
+        }
+    }
+
+
+    input[ type="radio" ]{
+        display: none;
+
+        & ~ i {
+            width: 20px;
+            height: 20px;
+            border: 1px solid $color_border;
+            border-radius: 200px;
+            display: inline-block;
+            margin-right: 15px;
+            position: relative;
+            vertical-align: middle;
+
+            @include mq( sp ){
+                width: 30px;
+                height: 30px;
+            }  
+        }
+        &:checked ~ i {
+            &:before{
+                content: " ";
+                width: 12px;
+                height: 5px;
+                margin: auto;
+                display: block;
+                position: absolute;
+                top: -1px;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transform-origin: center;
+                transform: rotate( -45deg );
+                border-left: 3px solid $red;
+                border-bottom: 3px solid $red;
+            }            
+        }
+    }
+
+
+
+    .formIntro{
+        font-weight: bold;
+        color: $red;
+    }
+
+    .formTable__button{
+        margin-top: 60px;
+        text-align: center;
+    }
+
+
+    .formTable__row{
+        display: flex;
+
+        @include mq( tab ){
+            flex-direction: column;
+        }
+
+        .formTable__col:first-child{
+            margin-right: 130px;
+        
+            @include mq( tab ){
+                margin-right: 0;
+            }            
+        }
+    }
+    .formTable__col{
+        width: 100%;
+    }
+    .formTable__col__row{
+        margin-top: 50px;
+
+        @include mq( sp ){
+            margin-top: 30px;
+        }          
+    }
+
+
+
+    //////// style
+
+    ////種別
+    .formTable__row--type{
+
+        dt{
+            margin-bottom: 10px;
+        }
+        li{
+            margin-right: 50px;
+            display: inline-block;
+
+            @include mq( sp ){
+                width: 49%;
+                margin-bottom: 20px;
+                margin-right: 0;
+            }              
+        }
+        label{
+            cursor: pointer;
+        }
+    }
+
+
+    ////名前
+    .formTable__col__row--name{
+        .inputs{
+            display: flex;
+            li{
+                width: 100%;
+                list-style: none;
+            }
+        }
+    }
+
+
+    ///// 内容
+    .formTable__col__row--message{
+        textarea{
+            height: 412px;
+
+            @include mq( tab ){
+                height: 240px; 
+            }
+        }
     }
 }
 

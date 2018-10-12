@@ -12,3 +12,54 @@
 // button element
 
 ////////////////////
+
+  .button{
+        width: 245px;
+        display: inline-block;
+        position: relative;
+
+        @include mq( sp ){
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 50px;
+        }   
+
+        button{
+            background: none;
+            font-size: 1em;
+        }
+        
+        a,
+        button{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            position: relative;
+            display: block;
+            border: 1px solid;
+            text-align: center;
+
+            &:before,
+            &:after{
+                content:" "; 
+                height: 1px;
+                margin-top: auto;
+                margin-bottom: auto;
+                position: absolute;
+                top: 0;
+                right: 10px;
+                bottom: 0;
+                background-color: currentColor;
+                transition: transition();
+            }
+
+            &:before{
+                width: 25px;
+            }
+            &:after{
+                width: 10px;
+                transform-origin: right center;
+                transform: rotate( 30deg );
+            }
+        }
+    }

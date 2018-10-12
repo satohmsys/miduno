@@ -964,6 +964,102 @@
 			</div>
 		</section>
 		<!-- ///// -->
+		<!-- ***** contact -->
+		<section id="contact" class="section section--catetory section--contact">
+			<header class="section__index ">
+				<span class="mask__element">CONTACT</span>
+			</header>
+			<div class="section__content">
+				<div class="inner">
+					<p class="formIntro">
+						「*」のついた箇所は記入必須項目です。
+					</p>
+					<form id="mailformpro" class="formTable" action="form/mailformpro/mailformpro.cgi" method="POST">
+						<div class="formTable__row formTable__row--type">
+							<dl class="formTable__col">
+								<dt class="mfp must">種別</dt>
+								<dd class="mfp">
+									<ul class="radios">
+										<li class="radios__radio">
+											<label><input type="radio" name="種別" value="求人関係" checked><i></i>求人関係</label>
+										</li>
+										<li class="radios__radio">
+											<label><input type="radio" name="種別" value="メディア関係"><i></i>メディア関係</label>
+										</li>
+										<li class="radios__radio">
+											<label><input type="radio" name="種別" value="商品について"><i></i>商品について</label>
+										</li>
+										<li class="radios__radio">
+											<label><input type="radio" name="種別" value="その他"><i></i>その他</label>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<div class="formTable__row">
+							<div class="formTable__col">
+								<dl class="formTable__col__row">
+									<input type="hidden" name="団体名" value="">
+									<dt class="mfp must">団体名（法人名・学校名等）</dt>
+									<dd class="mfp">
+										<input type="text" name="団体名" placeholder="団体名（法人名・学校名等）" required="required">
+									</dd>
+								</dl>
+								<dl class="formTable__col__row formTable__col__row--name">
+									<input type="hidden" name="お名前" data-unjoin="姓+ +名+（+セイ+ +メイ+）" value="">
+									<dt class="mfp must">お名前 </dt>
+									<dd class="mfp">
+										<ul class="inputs">
+											<li>
+												<input type="text" name="姓" data-kana="セイ" size="15" placeholder="山田" required="required">
+											</li>
+											<li>
+												<input type="text" name="名" data-kana="メイ" size="15" placeholder="太郎" required="required">
+											</li>
+										</ul>
+									</dd>
+								</dl>
+								<dl class="formTable__col__row">
+									<input type="hidden" name="mfp_separator_01" value="\n【メールアドレス】\n">
+									<dt class="mfp must">メールアドレス</dt>
+									<dd class="mfp"><input type="email" data-type="email" name="email" placeholder="info@miduno.co.jp" required="required"></dd>
+								</dl>
+								<dl class="formTable__col__row">
+									<dt class="mfp must">電話番号</dt>
+									<dd class="mfp"><input type="tel" data-type="tel" name="電話番号" place-holder="000-0000-0000" data-min="9"></dd>
+								</dl>
+							</div>
+							<div class="formTable__col">
+								<dl class="formTable__col__row formTable__col__row--message">
+									<dt class="mfp must">お問い合わせ内容</dt>
+									<dd class="mfp"><textarea name="お問い合わせ" placeholder="ご記入ください" required="required"></textarea></dd>
+								</dl>
+							</div>
+						</div>
+						<aside class="formTable__attention">
+							<header class="formTable__attention__index">
+								個人情報の取扱いについて
+							</header>
+							<div class="formTable__attention__content">
+								お客さまの個人情報はお問い合わせに対する返信の目的でのみ利用し、当社にて適切に管理します。法令などにより開示を求められた場合を除き、お客さまの同意無しに第三者に開示・提供することはありません。
+							</div>
+						</aside>
+						<div class="formTable__button">
+							<div class="mfp_buttons buttons">
+								<div class="button">
+									<button type="submit">確認画面へ</button>
+								</div>
+								<!-- <div class="button button--undo">
+									<button type="reset">リセット</button>
+								</div> -->
+							</div>
+						</div>
+					</form>
+					<script type="text/javascript" id="mfpjs" src="form/mailformpro/mailformpro.cgi" charset="UTF-8"></script>
+				</div>
+			</div>
+		</section>
+		<!-- ///// -->
 	</main>
 	<%- include( '_include/footer.ejs' ); %>
 </body>
