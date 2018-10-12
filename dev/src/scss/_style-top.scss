@@ -294,7 +294,7 @@ main .wrap{
                 background-color: #fff;
                 // transition: transition();
 
-                animation: scrollbar 2s linear 0s infinite normal backwards;                
+                animation: scrollbar 2s ease 0s infinite reverse backwards;                
             }
         }
 
@@ -571,7 +571,7 @@ main .wrap{
 
 
             &:first-child{
-                border-top: solid solid $color_border;
+                border-top: solid 1px $color_border;
             }
 
             &__then{
@@ -842,7 +842,6 @@ main .wrap{
         }
 
         &__content{
-            overflow: hidden;
             @include mq( sp ){
               display: flex;
               flex-direction: column-reverse;
@@ -869,9 +868,12 @@ main .wrap{
 
             @include mq( sp ){
                 margin-top: 0;
-               margin-right: 0;
+               margin-right: -20px;
                margin-bottom: 20px; 
-               margin-left: 0;
+               margin-left: -20px;
+               padding-right: 20px;
+               padding-left: 20px;
+               overflow: hidden;
             }
 
             //// slick
@@ -892,7 +894,7 @@ main .wrap{
 
                 @include mq( sp ){
                     width: 10px;
-                    height: 10px;
+                    height: 15px;
                 }                    
 
 
@@ -901,7 +903,7 @@ main .wrap{
                     transform: rotate( -135deg );
 
                     @include mq( sp ){
-                        left: -15px;
+                        left: 10px;
                     }                    
                 }
                 &.slick-next{
@@ -909,7 +911,7 @@ main .wrap{
                     transform: rotate( 45deg );
 
                     @include mq( sp ){
-                        right: -15px;
+                        right: 10px;
                     }                    
                 }
             }            
@@ -963,9 +965,6 @@ main .wrap{
                 display: none;
             } 
         }
-
-
-        
     }
 }
 

@@ -17,6 +17,7 @@
     50%{
         top: auto;
         bottom: 0;
+        height: 100%;
     }
     75%{
         height: 0;
@@ -27,3 +28,45 @@
         height: 0;
     }
 }
+@keyframes scrollbar-bottom{
+    0%{
+        bottom: 0;
+        height: 0px;
+    }
+    25%{
+        height: 100%;
+    }
+    50%{
+        bottom: auto;
+        top: 0;
+        height: 100%;
+    }
+    75%{
+        height: 0;
+    }    
+    100%{
+        bottom: 0;
+        top: auto;
+        height: 0;
+    }
+}
+// @keyframes scrollbar{
+//     0%{
+//         height: 30px;
+//         bottom: 30px;
+//     }
+//     25%{
+//         // height: 100%;
+//     }
+//     50%{
+//         bottom: 0px;
+//         height: 30px;
+//     }
+//     75%{
+//         height: 0;
+//     }    
+//     100%{
+//         bottom: 30px;
+//         height: 0;
+//     }
+// }

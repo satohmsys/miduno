@@ -162,12 +162,10 @@ body{
 		}
 
 		li a.active{
-			color: #ffffff;
-			background-color: $red;
-					
-			&:before{
-
-			}					
+			@include mq( tab, min ){
+				color: #ffffff;
+				background-color: $red;
+			}
 		}
 
 
@@ -339,7 +337,7 @@ body{
 			display: block;
 			background-color: $navy;
 			transition: transition();
-			animation: scrollbar 2s linear 0s infinite reverse backwards;                
+			animation: scrollbar-bottom 2s ease 0s infinite reverse both;                
 
 		}
 	}
