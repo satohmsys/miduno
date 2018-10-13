@@ -87,6 +87,7 @@
             transition: transition();
             transition-delay: 0.15s;
             background-color: $red;
+            will-change: width;
         }
         &__element{
             white-space: nowrap;
@@ -94,6 +95,7 @@
             transform: translateX( -100% );
             transition: transition(all, 0.5s);
             transition-delay: 0.235s;
+            will-change: transform;            
         }
     }
 }

@@ -88,45 +88,22 @@ getScrollVal(f2);
 let $loadingAnim = $('.loadingAnim');
 
 if ($loadingAnim.length ) {
-	new Promise( function( resolve ){
-		$w.on('load', function () {
-			document.body.classList.add('-is-ready');
-		})
-		return resolve( 1 );
-	}).then(function( resolve ){
-		document.querySelector('.loadingAnim .mask__element').addEventListener('transitionend', function (e) {
+	$w.on( 'load', function(){
+		$( 'body' ).addClass( '-is-ready' );
+
+		$('.loadingAnim .mask__element').on('transitionend', function( e ){
 			e.stopPropagation();
-			document.body.classList.add('-is-loaded');
-		});
-	}).then( function(){
-			document.getElementsByClassName('loadingAnim')[0].addEventListener('transitionend', function (e) {
+			e.preventDefault();
+
+			$('body').addClass('-is-loaded');
+
+			$('.loadingAnim').on( 'transitionend' , function( e ){
 				e.stopPropagation();
-				// console.log( e );
-				setTimeout(() => {
-					$loadingAnim.remove();
-				}, 1500); 
-				document.body.classList.add('-is-loadend');
-			});
+				$( 'body' ).addClass( '-is-loadend' );
+				// $loadingAnim.remove();
+			});	
+		});
 	});
-
-	// $w.on( 'load', function(){
-	// 	$( 'body' ).addClass( '-is-ready' );
-
-	// 	$( '.lastChar' ).on('transitionend', function( e ){
-	// 		e.stopPropagation();
-	// 		e.preventDefault();
-
-	// 		$('body').addClass('-is-loaded');
-	// 		setTimeout( function(){
-	// 			$('.loadingAnim').on( 'transitionend' , function( e ){
-	// 				e.stopPropagation();
-		
-	// 				$loadingAnim.remove();
-	// 			});	
-	// 		}, 2000 )
-	// 	});
-	// });
-
 }
 
 /**

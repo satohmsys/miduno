@@ -8,17 +8,16 @@ $( function(){
 	$('.mv__imgs').slick({
 		arrows: false,
 		autoplay: true,
-		autoplayspeed: 700,
 		dots: true,
 		pauseOnFocus: false,
 		pauseOnHover: false,
 		pauseOnDotsHover: false,
 		infinite: true,
 		fade: true,
-		pause: 5000,
+		pause: 4000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		speed: 700,
+		speed: 2000,
 	});
 	$('.brands__imgs').slick({
 		arrows: true,

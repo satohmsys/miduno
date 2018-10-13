@@ -207,10 +207,18 @@ main .wrap{
             width: 100%;
             height: auto;
             display: block;
+            transform: scale(1.1);
+            transform-origin: center center;
+            transition: all 6.2s linear 0s;
         }
+
+        .slick-current img {
+            transform: scale(1);
+        }
+
         .slick-slide > div {
-            transition: easeInOut( all,2s );
-            transform: scale(1.2);
+            transition: all 3s ease-out 0s;
+            transform: scale(1.1);
             transform-origin: center center;
         }
     }
