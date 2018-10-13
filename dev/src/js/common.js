@@ -88,22 +88,47 @@ getScrollVal(f2);
 let $loadingAnim = $('.loadingAnim');
 
 if ($loadingAnim.length ) {
-	$w.on( 'load', function(){
-		$( 'body' ).addClass( '-is-ready' );
-
-		$('.loadingAnim .mask__element').on('transitionend', function( e ){
+	new Promise(( resolve ) => {
+		window.addEventListener('load', () =>{
+			document.body.classList.add('-is-ready');
+		})
+		resolve( );
+	}).then(( resolve ) => {
+		document.querySelector('.loadingAnim .mask__element').addEventListener('transitionend', ( e ) => {
 			e.stopPropagation();
-			e.preventDefault();
-
-			$('body').addClass('-is-loaded');
-
-			$('.loadingAnim').on( 'transitionend' , function( e ){
-				e.stopPropagation();
-				$( 'body' ).addClass( '-is-loadend' );
-				// $loadingAnim.remove();
-			});	
+			document.body.classList.add('-is-loaded');
+		});
+	}).then(( resolve ) => {
+		document.getElementsByClassName('loadingAnim')[0].addEventListener('transitionend', (e) => {
+			e.stopPropagation();
+			if (e.propertyName == 'transform'){
+				setTimeout(() => {
+					$loadingAnim.remove();
+				}, 1500); 
+			}
+			document.body.classList.add('-is-loadend');
 		});
 	});
+
+	// if ($loadingAnim.length) {
+	// 	$w.on('load', function () {
+	// 		$('body').addClass('-is-ready');
+
+	// 		$('.loadingAnim .mask__element').on('transitionend', function (e) {
+	// 			e.stopPropagation();
+	// 			e.preventDefault();
+
+	// 			$('body').addClass('-is-loaded');
+
+	// 			$('.loadingAnim').on('transitionend', function (e) {
+	// 				e.stopPropagation();
+	// 				$('body').addClass('-is-loadend');
+	// 				// $loadingAnim.remove();
+	// 			});
+	// 		});
+	// 	});
+	// }
+
 }
 
 /**
