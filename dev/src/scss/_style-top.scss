@@ -202,11 +202,21 @@ main .wrap{
     
 
     &__imgs{
+        line-height: 0;
         img{
             width: 100%;
             height: auto;
+            display: block;
+        }
+        .slick-slide > div {
+            transition: easeInOut( all,2s );
+            transform: scale(1.2);
+            transform-origin: center center;
         }
     }
+	@at-root .-is-loadend .mv__imgs .slick-slide > div {
+		transform: scale( 1 );
+	}    
 
 
     .slick-dots{
@@ -224,7 +234,7 @@ main .wrap{
 
         li{
             width: 80px;
-            height: 5px;
+            height: 3px;
             list-style: none;
             opacity: 0.5;
             transition: transition();

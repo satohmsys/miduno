@@ -17,6 +17,8 @@
 
 ::selection{background-color: rgba(saturate(#ccc , 13) , 0.3);}
 html{
+	width: 100%;
+	overflow-x: hidden;
 	font-size: 10px;
 	// font-size: $basefontSize;
 	font-weight: 300;
@@ -33,7 +35,9 @@ html{
 }
 
 body{
-	padding-top: 100px;
+	width: 100%;
+	overflow-x: hidden;
+	// padding-top: 100px;
 	margin-right: auto;
 	margin-bottom: 0;
 	margin-left: auto;
@@ -41,7 +45,7 @@ body{
 	letter-spacing: 0.04em;
 
 	@include mq( tab ){
-		padding-top: 60px;
+		// padding-top: 60px;
 		font-size: 1.3rem;
 	}
 }

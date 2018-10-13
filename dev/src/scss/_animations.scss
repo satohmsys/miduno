@@ -90,3 +90,21 @@
 //         height: 0;
 //     }
 // }
+
+
+@keyframes maskmove{
+    0%{
+        width: 0;
+        left: 0;
+    }
+    45%{
+        width: 90%;
+    }
+    75%{    
+        width: 50%;
+    }
+    100%{
+        width: 0;
+        left: 101%;
+    }
+}

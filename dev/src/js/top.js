@@ -62,8 +62,9 @@ getScrollVal( function( scrollVal ){
 
 			$( '.siteHeader__nav li a' ).removeClass( 'active' );
 			$( '.siteHeader__nav li a[ href="#' + $id + '"]' ).addClass( 'active' );
-
-		} 
+		} else if ( scrollVal < 400) {
+			 $('.siteHeader__nav li a').removeClass('active')
+		}
 	} )
 
 })

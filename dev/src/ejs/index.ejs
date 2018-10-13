@@ -7,6 +7,7 @@
 <html>
 <%- include( '_include/head.ejs' ); %>
 <body class="top">
+	<%- include( '_include/_loadingAnim.ejs' ); %>
 	<%- include( '_include/header.ejs' ); %>
 	<section class="mv">
 		<h2 class="mv__copy wrap">
@@ -46,16 +47,18 @@
 								</span>
 							</span>
 						</h3>
-						<div class="section__mv__text__content mask">
-							<p class="mask__element">
-								これだけモノに溢れた現代において、<br>
-								本物の価値に出会うことは幸せなことだと思う。<br>
-								この上質なモノの価値や佇まいを、次の人へ伝え、継承していく。<br>
-								そして、バトンパスによって、ストーリーは続いていく。<br>
-								私たちが目指すのは、上質なモノが身近にある循環型の社会。<br>
-								確かな価値との新しい出会い、リユースでつないでいく未来。<br>
-								そんなストーリーのサイクルを、人の手で受け継がれる日常を。
-							</p>
+						<div class="section__mv__text__content">_
+								<span class="mask">
+									<span class="mask__element">
+										これだけモノに溢れた現代において、<br>
+										本物の価値に出会うことは幸せなことだと思う。<br>
+										この上質なモノの価値や佇まいを、次の人へ伝え、継承していく。<br>
+										そして、バトンパスによって、ストーリーは続いていく。<br>
+										私たちが目指すのは、上質なモノが身近にある循環型の社会。<br>
+										確かな価値との新しい出会い、リユースでつないでいく未来。<br>
+										そんなストーリーのサイクルを、人の手で受け継がれる日常を。
+									</span>
+								</span>_
 						</div>
 					</section>
 				</section>
@@ -64,41 +67,43 @@
 				<!-- *** minds -->
 				<section class="minds">
 					<div class="wrap">
-						<section class="mind mind--main js-effect">
-							<h2 class="mind__index mask">
-								<span class="mask__element">自分にも、家族にも、誇れる会社を。</span>
+						<section class="mind mind--main ">
+							<h2 class="mind__index js-effect">
+								<span class="mask"><span class="mask__element">自分にも、家族にも、誇れる会社を。</span></span>
 							</h2>
-							<div class="mind__content mask">
-								<p class="mask__element">
-									多様な働き方がある現代において、仕事は自己実現の手段にもなってきています。<br>
-									自分の仕事・働く会社について、友人や家族、そして我が子に胸を張って語れるだろうか？<br>
-									ひとりの専門家として、ひとりの社会人として、この世の中に貢献していく。<br>
-									私たちに関わるすべての人に、堂々と誇れる会社を、それが私たちの目指す姿です。
-								</p>
+							<div class="mind__content js-effect">
+								<span class="mask">
+									<span class="mask__element">
+										多様な働き方がある現代において、仕事は自己実現の手段にもなってきています。<br>
+										自分の仕事・働く会社について、友人や家族、そして我が子に胸を張って語れるだろうか？<br>
+										ひとりの専門家として、ひとりの社会人として、この世の中に貢献していく。<br>
+										私たちに関わるすべての人に、堂々と誇れる会社を、それが私たちの目指す姿です。
+									</span>
+								</span>
 							</div>
 						</section>
-						<section class="mind mind--sub js-effect">
-							<header class="mind__index mask">
-								<span class="mask__element">VISION</span>
+						<section class="mind mind--sub">
+							<header class="mind__index js-effect">
+								<span class="mask"><span class="mask__element">VISION</span></span>
 							</header>
-							<div class="mind__content mask">
-								<span class="mask__element">価値あるモノが継承される循環型の社会。</span>
+							<div class="mind__content js-effect">
+								<span class="mask"><span class="mask__element">価値あるモノが継承される循環型の社会。</span></span>
 							</div>
 						</section>
-						<section class="mind mind--sub js-effect">
-							<header class="mind__index mask">
-								<span class="mask__element">MISSION</span>
+						<section class="mind mind--sub">
+							<header class="mind__index js-effect">
+								<span class="mask"><span class="mask__element">MISSION</span></span>
 							</header>
-							<div class="mind__content mask">
-								<span class="mask__element">リユースをより身近に、イメージの一新を。</span>
+							<div class="mind__content js-effect">
+								<span class="mask"><span class="mask__element">リユースをより身近に、イメージの一新を。</span></span>
 							</div>
 						</section>
-						<section class="mind mind--sub js-effect">
-							<header class="mind__index mask">
-								<span class="mask__element">VALUE</span>
+						<section class="mind mind--sub">
+							<header class="mind__index js-effect">
+								<span class="mask"><span class="mask__element">VALUE</span></span>
 							</header>
-							<div class="mind__content mask">
-								<span class="mask__element">本物との出会いを、お客様の日常に。</span>
+							<div class="mind__content js-effect">
+								<span class="mask"><span class="mask__element">本物との出会いを、お客様の日常に。</span></span>
 							</div>
 						</section>
 					</div>
@@ -112,23 +117,27 @@
 								<header class="message__text__index js-effect">
 									<span class="mask"><span class="mask__element">MESSAGE</span></span>
 								</header>
-								<div class="message__text__content js-effect mask">
-									<div class="mask__element">
-										<p>
-											貴金属やブランド品など、価値あるモノは我々の生活に豊かさを与えてくれます。それを手にする方法としてリユースがあります。しかし、不要になった物を売り、買うというサイクルにまだまだ抵抗を感じる人がいるのも事実です。リユースは、物が持つストーリーを継承し、世の中を循環させてくものだと考えています。
-											リユースのネガティブな印象を一新していき、価値ある物がより多くの人に届くよう、我々はリユースのある日常づくりを目指しています。そして、リユースによる日本の経済の循環と、みなさまの生活に豊かさを提供できることを願っています。
-										</p>
-										<p class="">
-											<span class="message__text__div">株式会社水野　代表取締役</span>
-											<span class="message__text__name">水野 政行</span>
-										</p>
-									</div>
+								<div class="message__text__content js-effect">
+									<p>
+										<span class="mask">
+											<span class="mask__element">
+												貴金属やブランド品など、価値あるモノは我々の生活に豊かさを与えてくれます。それを手にする方法としてリユースがあります。しかし、不要になった物を売り、買うというサイクルにまだまだ抵抗を感じる人がいるのも事実です。リユースは、物が持つストーリーを継承し、世の中を循環させてくものだと考えています。
+												リユースのネガティブな印象を一新していき、価値ある物がより多くの人に届くよう、我々はリユースのある日常づくりを目指しています。そして、リユースによる日本の経済の循環と、みなさまの生活に豊かさを提供できることを願っています。
+											</span>
+										</span>
+									</p>
+									<p>
+										<span class="mask">
+											<span class="mask__element">
+												<span class="message__text__div">株式会社水野　代表取締役</span>
+												<span class="message__text__name">水野 政行</span>
+											</span>
+										</span>
+									</p>
 								</div>
 							</section>
-							<div class="message__img js-effect mask">
-								<figure class="mask__element">
-									<img src="<%- $path %>../img/about-message-img.jpg" alt="">
-								</figure>
+							<div class="message__img js-effect">
+								<span class="mask"><span class="mask__element"><img src="<%- $path %>../img/about-message-img.jpg" alt=""></span></span>
 							</div>
 						</div>
 					</section>
@@ -265,25 +274,33 @@
 		<!-- ///// -->
 		<!-- ***** service -->
 		<section id="service" class="section section--catetory section--service">
-			<header class="section__index js-effect mask">
-				<span class="mask__element">SERVICE</span>
+			<header class="section__index js-effect">
+				<span class="mask"><span class="mask__element">SERVICE</span></span>
 			</header>
 			<div class="js-effect mask">
 				<section class="section__mv">
-					<figure class="section__mv__img mask__element">
-						<img src="<%- $path %>../img/service-img.jpg" srcset="/assets/img/_sp/service-img.jpg 468w, /assets/img/service-img.jpg" alt="">
-					</figure>
+					<div class="mask">
+						<figure class="section__mv__img mask__element">
+							<img src="<%- $path %>../img/service-img.jpg" srcset="/assets/img/_sp/service-img.jpg 468w, /assets/img/service-img.jpg" alt="">
+						</figure>
+					</div>
 					<section class="section__mv__text">
 						<h3 class="section__mv__text__index">
-							<span class="mask__element">
-								「いらない」と「ほしい」を結ぶ。
+							<span class="mask">
+								<span class="mask__element">
+									「いらない」と「ほしい」を結ぶ。
+								</span>
 							</span>
 						</h3>
-						<div class="section__mv__text__content mask__element">
-							web×リアルを融合した買取ビジネスで、<br>
-							お客様の需要と供給を結ぶサービスを実現。<br>
-							厳選された本物を取り扱い継承していくことで、<br>
-							モノの価値や想いをつないでいく。
+						<div class="section__mv__text__content">
+							<span class="mask">
+								<span class="mask__element">
+									web×リアルを融合した買取ビジネスで、<br>
+									お客様の需要と供給を結ぶサービスを実現。<br>
+									厳選された本物を取り扱い継承していくことで、<br>
+									モノの価値や想いをつないでいく。
+								</span>
+							</span>
 						</div>
 					</section>
 				</section>
@@ -298,76 +315,82 @@
 									<img src="<%- $path %>../img/service-business-img.jpg" alt="">
 								</figure>
 							</div>
-							<div class="businessShowLayout__text mask">
-								<div class="mask__element">
-									<h2 class="businessShowLayout__index">
-										買取ビジネス
-									</h2>
-									<h3 class="businessShowLayout__subindex">
-										厳選された本物のリユースをより身近に、<br>次の所有者へ継承していく。
-									</h3>
-									<div class="businessShowLayout__content">
-										買取ビジネスは、貴金属やブランド品、骨董品や硬貨・古銭など、お客様の「不要物」を価値あるものに換えていきます。確かな価値をもつ高価なモノに囲まれたリアル店舗で、お客様の「いらない」と「ほしい」を結んでいきます。
-									</div>
+							<div class="businessShowLayout__text">
+								<h2 class="businessShowLayout__index">
+									<span class="mask"><span class="mask__element">買取ビジネス</span></span>
+								</h2>
+								<h3 class="businessShowLayout__subindex">
+									<span class="mask"><span class="mask__element">厳選された本物のリユースをより身近に、<br>次の所有者へ継承していく。</span></span>
+								</h3>
+								<div class="businessShowLayout__content">
+									<span class="mask"><span class="mask__element">買取ビジネスは、貴金属やブランド品、骨董品や硬貨・古銭など、お客様の「不要物」を価値あるものに換えていきます。確かな価値をもつ高価なモノに囲まれたリアル店舗で、お客様の「いらない」と「ほしい」を結んでいきます。</span></span>
 								</div>
 							</div>
 						</section>
 						<section>
 							<ul class="business__detail">
-								<li class="business__detail__thing js-effect mask">
+								<li class="business__detail__thing js-effect">
 									<div class="business__detail__thing__text">
-										<h4 class="business__detail__thing__text__index mask__element">
-											「信頼の証」として、不正品排除を目的とした団体のAACD（日本流通自主管理協会）に加盟。
+										<h4 class="business__detail__thing__text__index">
+											<span class="mask"><span class="mask__element">「信頼の証」として、不正品排除を目的とした団体のAACD（日本流通自主管理協会）に加盟。</span></span>
 										</h4>
-										<div class="business__detail__thing__text__content mask__element">
-											日本流通自主管理協会（略称AACD）は、並行輸入品市場での“偽造品”や“不正商品”の流通防止と排除を目指して1988年4月に発足した民間団体です。
-											私たちは消費者の皆様が安心して買い物ができる確かなブランド品市場を形成するために、関係諸機関・団体及び、関連企業等と連携をとり「協会」独自の商品取り扱い自主基準を定め、監視・管理システムを確立しお客様が安心してお買い物をお楽しみいただける環境作りに努めております。
+										<div class="business__detail__thing__text__content">
+											<span class="mask"><span class="mask__element">日本流通自主管理協会（略称AACD）は、並行輸入品市場での“偽造品”や“不正商品”の流通防止と排除を目指して1988年4月に発足した民間団体です。
+											私たちは消費者の皆様が安心して買い物ができる確かなブランド品市場を形成するために、関係諸機関・団体及び、関連企業等と連携をとり「協会」独自の商品取り扱い自主基準を定め、監視・管理システムを確立しお客様が安心してお買い物をお楽しみいただける環境作りに努めております。</span></span>
 										</div>
 									</div>
-									<div class="business__detail__thing__image mask__element">
-										<figure>
+									<div class="business__detail__thing__image mask">
+										<figure class="mask__element">
 											<img src="<%- $path %>../img/service-aacd-img.jpg" alt="">
 										</figure>
 									</div>
 								</li>
-								<li class="business__detail__thing js-effect mask">
+								<li class="business__detail__thing js-effect">
 									<div class="business__detail__thing__text">
-										<h4 class="business__detail__thing__text__index mask__element">
-											JAPAN TAX FREE SHOP
+										<h4 class="business__detail__thing__text__index">
+											<span class="mask"><span class="mask__element">JAPAN TAX FREE SHOP</span></span>
 										</h4>
-										<div class="business__detail__thing__text__content mask__element">
-											<p>
-												当店は免税店となっております。外国人旅行者の方は 消費税8%免除でお買い物をお得に楽しんでいただけます。ぜひ、皆さんご一緒にお立ち寄りください。
-											</p>
-											<p>
-												※パスポートが必要です（コピー不可）合計で￥10,001（税抜）以上のお買い物が対象となります。
-											</p>
+										<div class="business__detail__thing__text__content">
+											<div class="mask">
+												<div class="mask__element">
+													<p>
+														当店は免税店となっております。外国人旅行者の方は 消費税8%免除でお買い物をお得に楽しんでいただけます。ぜひ、皆さんご一緒にお立ち寄りください。
+													</p>
+													<p>
+														※パスポートが必要です（コピー不可）合計で￥10,001（税抜）以上のお買い物が対象となります。
+													</p>
+												</div>
+											</div>
 										</div>
 									</div>
-									<div class="business__detail__thing__image mask__element">
-										<figure>
+									<div class="business__detail__thing__image mask">
+										<figure class="mask__element">
 											<img src="<%- $path %>../img/service-taxfree-img.jpg" alt="">
 										</figure>
 									</div>
 								</li>
-								<li class="business__detail__thing js-effect mask">
+								<li class="business__detail__thing js-effect">
 									<div class="business__detail__thing__text">
-										<h4 class="business__detail__thing__text__index mask__element">
-											おたからや 6 銀座店
+										<h4 class="business__detail__thing__text__index">
+											<span class="mask"><span class="mask__element">おたからや 6 銀座店</span></span>
 										</h4>
-										<div class="business__detail__thing__text__content mask__element">
-											<p>
-												2018年10月より、東京都中央区銀座6丁目に「おたからや 6
-												銀座店」がオープンしました。高級ブランドのファッションアイテムをはじめ、美術品や骨董品など、高価な物を取り扱っています。銀座という土地にふさわしい、アンティークな空気が漂う上質で居心地の良い空間づくりを目指した店舗となっています。
-											</p>
-											<p>
-												〒104-0061 東京都中央区銀座６丁目XXXXXXXXXXXXXXX
-											</p>
-											<p><a href="" target="_blank">> Google Mapで見る</a></p>
+										<div class="business__detail__thing__text__content">
+											<div class="mask">
+												<div class="mask__element">
+													<p>
+														2018年10月より、東京都中央区銀座6丁目に「おたからや 6
+														銀座店」がオープンしました。高級ブランドのファッションアイテムをはじめ、美術品や骨董品など、高価な物を取り扱っています。銀座という土地にふさわしい、アンティークな空気が漂う上質で居心地の良い空間づくりを目指した店舗となっています。
+													</p>
+													<p>
+														〒104-0061 東京都中央区銀座６丁目XXXXXXXXXXXXXXX
+													</p>
+													<p><a href="" target="_blank">> Google Mapで見る</a></p>
+												</div>
+											</div>
 										</div>
 									</div>
-									<div class="business__detail__thing__image mask__element">
-										<figure>
+									<div class="business__detail__thing__image mask">
+										<figure class="mask__element">
 											<img src="<%- $path %>../img/service-otakara-img.jpg" alt="">
 										</figure>
 									</div>
@@ -478,16 +501,16 @@
 										<img src="<%- $path %>../img/service-foreign-img.jpg" alt="">
 									</figure>
 								</div>
-								<div class="businessShowLayout__text mask">
-									<div class="mask__element">
+								<div class="businessShowLayout__text">
+									<div class="">
 										<h2 class="businessShowLayout__index">
-											海外向けネット事業
+											<span class="mask"><span class="mask__element">海外向けネット事業</span></span>
 										</h2>
 										<h3 class="businessShowLayout__subindex">
-											ITを活用したグローバル展開で、<br>世界中のより多くの方に価値ある物を。
+											<span class="mask"><span class="mask__element">ITを活用したグローバル展開で、<br>世界中のより多くの方に価値ある物を。</span></span>
 										</h3>
 										<div class="businessShowLayout__content">
-											ITを駆使することで世界とつながれる。世界中にも「いらない」「ほしい」のニーズがあり、相互を結んでいく事業を展開。世界TOPクラスの厳選されたブランド品を、ITを活用して世界中へ届けていくことで、リユースのグローバル規模へと。
+											<span class="mask"><span class="mask__element">ITを駆使することで世界とつながれる。世界中にも「いらない」「ほしい」のニーズがあり、相互を結んでいく事業を展開。世界TOPクラスの厳選されたブランド品を、ITを活用して世界中へ届けていくことで、リユースのグローバル規模へと。</span></span>
 										</div>
 									</div>
 								</div>
@@ -495,18 +518,22 @@
 							</section>
 							<section>
 								<ul class="business__detail">
-									<li class="business__detail__thing js-effect mask">
+									<li class="business__detail__thing js-effect">
 										<div class="business__detail__thing__text">
-											<h4 class="business__detail__thing__text__index mask__element">
-												ネットEコマースのルイ・ヴィトンの中古品に特化したリユース新専門店「LooV」。
+											<h4 class="business__detail__thing__text__index">
+												<span class="mask"><span class="mask__element">ネットEコマースのルイ・ヴィトンの中古品に特化したリユース新専門店「LooV」。</span></span>
 											</h4>
-											<div class="business__detail__thing__text__content mask__element">
-												Louis Vuitton」に特化したリユース店「LooV（ルーヴ）」を、海外ネット向け販売として展開していきます。「LooV」の由来は、『Louis Vuitton＋loop＝輪』Louis
-												Vuittonがリサイクルするストア。ネットEコマースを利用して上質なブランドに特化したサービスは、今までにない店舗形態。海外ユーザーをターゲットに上質なブランドを循環させていくことで、より多くの方に浸透できるよう努めています。
+											<div class="business__detail__thing__text__content">
+												<span class="mask">
+													<span class="mask__element">
+														Louis Vuitton」に特化したリユース店「LooV（ルーヴ）」を、海外ネット向け販売として展開していきます。「LooV」の由来は、『Louis Vuitton＋loop＝輪』Louis
+														Vuittonがリサイクルするストア。ネットEコマースを利用して上質なブランドに特化したサービスは、今までにない店舗形態。海外ユーザーをターゲットに上質なブランドを循環させていくことで、より多くの方に浸透できるよう努めています。
+													</span>
+												</span>
 											</div>
 										</div>
-										<div class="business__detail__thing__image mask__element">
-											<figure>
+										<div class="business__detail__thing__image mask">
+											<figure class="mask__element">
 												<img src="<%- $path %>../img/service-foreign-loov.jpg" alt="">
 											</figure>
 										</div>
@@ -526,14 +553,16 @@
 		<!-- ///// -->
 		<!-- ***** company -->
 		<section id="company" class="section section--catetory section--company">
-			<header class="section__index js-effect mask">
-				<span class="mask__element">COMPANY</span>
+			<header class="section__index js-effect">
+				<span class="mask"><span class="mask__element">COMPANY</span></span>
 			</header>
-			<div class="js-effect mask">
+			<div class="js-effect">
 				<section class="section__mv">
-					<figure class="section__mv__img mask__element">
-						<img src="<%- $path %>../img/company-img.jpg" srcset="/assets/img/_sp/company-img.jpg 468w, /assets/img/company-img.jpg" alt="">
-					</figure>
+					<div class="mask">
+						<figure class="section__mv__img mask__element">
+							<img src="<%- $path %>../img/company-img.jpg" srcset="/assets/img/_sp/company-img.jpg 468w, /assets/img/company-img.jpg" alt="">
+						</figure>
+					</div>
 				</section>
 			</div>
 			<div class="section__content">

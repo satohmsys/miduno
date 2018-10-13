@@ -58,14 +58,13 @@ let f = ($scrollVal) => {
 	/**
 	* all fadein targets
 	*/
-	if ($jsEffect) {
+	if ( $jsEffect ) {
 		$.each($jsEffect, function () {
 			let $target = $(this);
 
 			if ($target.offset().top < $scrollBottom - 90) {
 				$target.addClass('-on');
-			}
-
+			} 
 		});
 	}
 }
@@ -95,7 +94,7 @@ if ($loadingAnim.length ) {
 		})
 		return resolve( 1 );
 	}).then(function( resolve ){
-		document.getElementsByClassName('lastChar')[0].addEventListener('transitionend', function (e) {
+		document.querySelector('.loadingAnim .mask__element').addEventListener('transitionend', function (e) {
 			e.stopPropagation();
 			document.body.classList.add('-is-loaded');
 		});
@@ -103,9 +102,10 @@ if ($loadingAnim.length ) {
 			document.getElementsByClassName('loadingAnim')[0].addEventListener('transitionend', function (e) {
 				e.stopPropagation();
 				// console.log( e );
-				// setTimeout(() => {
-					// $loadingAnim.remove();
-				// }, 1500); 
+				setTimeout(() => {
+					$loadingAnim.remove();
+				}, 1500); 
+				document.body.classList.add('-is-loadend');
 			});
 	});
 
