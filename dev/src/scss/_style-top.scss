@@ -520,6 +520,12 @@ main .wrap{
             right: 0;
             top: -50px;
 
+            span{
+                @include mq( tab, min ){
+                     width: 100%;
+                }
+            }
+
             @include mq( sp ){
                 width: 100%;
            		max-width: percentage( 670 / 750 );
