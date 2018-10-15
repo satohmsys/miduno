@@ -1414,6 +1414,11 @@ main .wrap{
         font-size: 1.3rem;
         border: 1px solid $color_border;
 
+        @include mq( tab ){
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
         &__index{
             line-height: 1;
             margin-bottom: 10px;

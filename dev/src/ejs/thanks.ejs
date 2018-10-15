@@ -1,0 +1,32 @@
+<% 
+	include( '_include/_function.ejs' );
+	$path = './';
+	$active = 'top';
+%>
+<!DOCTYPE html>
+<html>
+<%- include( '_include/head.ejs' ); %>
+<body class="thankyou">
+    <script>
+        setTimeout(() => {
+            location.href= location.href.replace( /thanks.html/, '' );
+        }, 5000);
+    </script>
+    <main>
+		<!-- *****  -->
+		<section class="section section--catetory section--thankyou">
+			<header class="section__index js-effect">
+				<span class="mask"><span class="mask__element">THANK YOU.</span></span>
+			</header>
+			<div class="section__content">
+				<div class="inner">
+    				<p>お問い合わせは送信されました。<br>○営業日以内に担当者から折り返しご連絡を差し上げますので、今しばらくお待ちくださいませ。</p>
+                    <p>5秒後にTOPページに転送されます。転送が始まらない場合は<a href="index.html">こちらをクリック</a>して戻ってください。</p>
+				</div>
+			</div>
+		</section>
+		<!-- ///// -->
+	</main>
+	<%- include( '_include/footer.ejs' ); %>
+</body>
+</html>
