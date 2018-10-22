@@ -760,12 +760,23 @@ main .wrap{
             }
 
             &__text__index{
+                line-height: 1.3;
                 font-size: $fontsize_m;
                 color: $red;
+                font-weight: bold;
 
                 @include mq( sp ){
                     font-weight: bold;
                 }                    
+            }
+
+            &__text__link{
+                @include iconfont( 
+                    $content: "\f041",
+                    $color: $red,
+                    $icon-margin-right: 10px,
+                    $font-size: 1.5em
+                )                
             }
 
 
@@ -911,8 +922,8 @@ main .wrap{
                 top: 0;
                 bottom: 0;
                 border: none;
-                border-top: 1px solid $color_border;
-                border-right: 1px solid $color_border;
+                border-top: 1px solid $color_border/1.5;
+                border-right: 1px solid $color_border/1.5;
                 background-color: transparent;
                 text-indent: -99999px;
 
@@ -1273,14 +1284,13 @@ main .wrap{
             transition: transition();
             // transition-property: background-color;
 
+            position: relative;
+
+     
             @include mq( sp ){
                 margin-bottom: 20px;
             }             
 
-            &.-open{
-                background-color: #ffffff;
-                color: $basefontColor;
-            }
 
             &__index{
                 line-height: 1;
@@ -1290,6 +1300,7 @@ main .wrap{
                 transition: transition();
                 border: 1px solid #fff;
                 color: #ffffff;
+                
 
                 @include mq( sp ){
                     padding-top: 20px;
@@ -1297,7 +1308,30 @@ main .wrap{
                     padding-bottom: 20px;
                     padding-left: 20px;
                 }
-                
+
+
+                &:before{
+                        content:"";
+                        width: 0%;
+                        height: 100%;
+                        position: absolute;
+                        z-index: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: #ffffff;
+                        // left: 0;
+                        transition: transition();
+                }            
+
+                @include mouseOver(){
+                    &:before{
+                        width: 100%;
+                        right: auto;
+                        left: 0;                    
+                    }                        
+                }                
+        
 
                 &:after{
                     content: " ";
@@ -1310,12 +1344,32 @@ main .wrap{
                     top: 0;
                     right: 20px;
                     bottom: 0;
+                    transition: transition();
+                    transition-property: border-color;
+
 
                     transform: scaleX(0.8) rotate( 135deg ) ;
                     transform-origin: center center;
                     border-top: 2px solid #fff;
                     border-right: 2px solid #fff;
-                }                
+                }           
+
+
+                span{
+                    position: relative;
+                    z-index: 1;
+                    transition: transition();
+                }       
+                @include mq( tab, min ){
+                    @include mouseOver(){
+                        span{
+                            color: $navy;                        
+                        }
+                        &:after{
+                            border-color: $navy;                 
+                        }
+                    }
+                }                                        
             }
 
             &.-open .recruitInfo__detail__index{
@@ -1326,6 +1380,15 @@ main .wrap{
                 &:after{
                     border-color: $navy;
                     transform: scaleX(0.8) rotate( -45deg ) ;                    
+                }
+
+                .recruitInfo__detail__index span{
+                    color: $basefontColor;
+                        &:before,
+                        &:after{
+                            background-color: $navy;
+                        }                        
+
                 }
             }
 
@@ -1344,39 +1407,37 @@ main .wrap{
                 }
                 th{
                     width: 80px;
+                    border-color: $navy;
                 }
             }
         }
 
 
         .button{
+            &:before{
+                background-color: #ffffff;
+            }
+
             a{
                 color: #ffffff;
                 &:before,
                 &:after{
                     background-color: #ffffff;
                 }
-
-
-                @include mq( tab ){
-                    color: $navy;
-                    background-color: #ffffff;
-                    &:before,
-                    &:after{
-                        background-color: $navy;
-                    }
-                }
-                @include mq( tab, min ){
+            }
+            @include mq( tab, min ){
+                a{
                     @include mouseOver(){
                         color: $navy;
-                        background-color: #ffffff;
+                        // background-color: #ffffff;
                         &:before,
                         &:after{
                             background-color: $navy;
                         }                        
                     }
-                }                
-            }
+
+                }
+            }                
         }
     }
 }
@@ -1401,6 +1462,7 @@ main .wrap{
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        font-size: 1.5rem;
     }    
 
     //////// module
@@ -1501,6 +1563,26 @@ main .wrap{
                 border-left: 3px solid $red;
                 border-bottom: 3px solid $red;
             }            
+        }
+    }
+
+
+    .button{
+        &:before{
+            background-color: $navy;
+        }
+
+        @include mq( tab,min ){
+            button{
+                @include mouseOver(){
+                    color: #fff;
+                    &:before,
+                    &:after{
+                        background-color: #fff;
+                    }                        
+                }
+
+            }
         }
     }
 
