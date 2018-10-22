@@ -377,6 +377,7 @@ body{
 	padding-top: 50px;
 	padding-bottom: 70px;
 	background-color: #f2f2f2;
+	font-size: 1.2rem;
 
 	@include mq( tab ){
 		margin-top: $space_l_sp;
