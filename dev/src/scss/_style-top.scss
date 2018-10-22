@@ -113,6 +113,12 @@
                     font-size: $fontsize_m_sp;
                 }
             }
+
+            &__content br{
+                @include mq( tab ){
+                    display: none;
+                } 
+            }        
             
         }
     }
@@ -340,11 +346,7 @@ main .wrap{
                 }
             }
         }    
-
     }
-
-
-
 }
 
 
@@ -362,8 +364,7 @@ main .wrap{
 
     @include mq( sp ){
         margin-top: 70px;
-    }       
-
+    } 
 
     
     .minds{
@@ -1542,8 +1543,8 @@ main .wrap{
             vertical-align: middle;
 
             @include mq( sp ){
-                width: 30px;
-                height: 30px;
+                width: 15px;
+                height: 15px;
             }  
         }
         &:checked ~ i {
@@ -1570,6 +1571,23 @@ main .wrap{
     .button{
         &:before{
             background-color: $navy;
+
+            @include mq( tab ){
+                background-color: #ffffff;
+            }
+        }
+
+        button{
+            @include mq( tab ){
+                color: #ffffff;
+                background-color: $navy;
+                border: none;
+
+                &:before,
+                &:after{
+                    background-color: #ffffff;
+                }
+            }
         }
 
         @include mq( tab,min ){
@@ -1591,6 +1609,10 @@ main .wrap{
     .formIntro{
         font-weight: bold;
         color: $red;
+
+        @include mq( tab ){
+            text-align: center;
+        } 
     }
 
     .formTable__button{
