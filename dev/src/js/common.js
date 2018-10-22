@@ -107,6 +107,21 @@ if ($loadingAnim.length ) {
 				}, 1500); 
 			}
 			document.body.classList.add('-is-loadend');
+			$('.mv__imgs').slick({
+				arrows: false,
+				autoplay: true,
+				autoplaySpeed: 6000,
+				dots: true,
+				pauseOnFocus: false,
+				pauseOnHover: false,
+				pauseOnDotsHover: false,
+				infinite: true,
+				fade: true,
+				// pause: 1000000,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				speed: 1000,
+			});
 		});
 	});
 

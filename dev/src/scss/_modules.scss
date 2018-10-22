@@ -315,24 +315,40 @@ body{
 
 
 	&__line{
-		width: 1px;
+		width: 3px;
 		height: 60px;
 		margin-right: auto;
 		margin-bottom: 20px;
 		margin-left: auto;
 		display: block;
 		position: relative;
+		overflow: hidden;
 		background-color: $color_border;
 
 		@include mq( sp ){
 			height: 50px;
 		}		
 
+		&:before {
+			content: " ";
+			width: 1px;
+			height: 60px;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+			position: absolute;
+			bottom: 0;
+			right: auto;
+			left: 1px;
+			// left: auto;
+			background-color: $navy;
+		}
+
 		
 		&:after{
 			content: " ";
 			width: 3px;
-			height: 0px;
+			height: 30px;
 			margin-right: auto;
 			margin-left: auto;
 			position: absolute;
@@ -341,9 +357,7 @@ body{
 			left: -1px;
 			display: block;
 			background-color: $navy;
-			transition: transition();
 			animation: scrollbar-bottom 2s ease-in 0s infinite normal both;                
-
 		}
 	}
 

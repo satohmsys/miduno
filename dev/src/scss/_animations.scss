@@ -7,28 +7,49 @@
 //////////////////////////////////////////
 
 @keyframes scrollbar{
-    0%{
-        top: 0;
-        height: 0px;
+    0% {
+        top: -100%;
     }
-    25%{
-        height: 100%;
+    75% {
+        top: 100%;
     }
-    50%{
-        top: auto;
-        bottom: 0;
-        height: 100%;
+    100% {
+        top: 100%;
     }
-    75%{
-        height: 0;
-    }    
-    100%{
-        top: 0;
-        bottom: auto;
-        height: 0;
-    }
+    // 0%{
+    //     top: 0;
+    //     height: 0px;
+    // }
+    // 25%{
+    //     height: 100%;
+    // }
+    // 50%{
+    //     top: auto;
+    //     bottom: 0;
+    //     height: 100%;
+    // }
+    // 75%{
+    //     height: 0;
+    // }    
+    // 100%{
+    //     top: 0;
+    //     bottom: auto;
+    //     height: 0;
+    // }
 }
 @keyframes scrollbar-bottom{
+    0% {
+        bottom: -100%;
+    }
+
+    75% {
+        bottom: 100%;
+    }
+
+    100%{
+        bottom: 100%;
+
+    }
     // 0%{
     //     bottom: 0;
     //     height: 0px;
@@ -48,27 +69,7 @@
     //     bottom: 0;
     //     top: auto;
     //     height: 0;
-    // }
-    0%{
-        bottom: 0;
-        height: 0px;
-    }
-    25%{
-        height: 100%;
-    }
-    50%{
-        bottom: auto;
-        top: 0;
-        height: 100%;
-    }
-    75%{
-        height: 0;
-    }    
-    100%{
-        bottom: 0;
-        top: auto;
-        height: 0;
-    }    
+    // }    
 }
 // @keyframes scrollbar{
 //     0%{
@@ -106,5 +107,15 @@
     100%{
         width: 0;
         left: 101%;
+    }
+}
+
+
+@keyframes mvZoom{
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
     }
 }

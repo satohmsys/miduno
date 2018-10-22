@@ -218,18 +218,15 @@ main .wrap{
             transition: all 6.2s linear 0s;
         }
 
-        .slick-current img {
-            transform: scale(1);
-        }
-
         .slick-slide > div {
-            transition: all 3s ease-out 0s;
-            transform: scale(1.1);
+            // transition: all 3s ease-out 0s;
+            // transform: scale(1.1);
+    		// animation: mvZoom 8s ease-out 0s 1 normal both;
             transform-origin: center center;
         }
     }
-	@at-root .-is-loadend .mv__imgs .slick-slide > div {
-		transform: scale( 1 );
+	@at-root .-is-loadend .mv__imgs.slick-initialized .slick-current>div {
+		animation: mvZoom 7s linear 0s 1 normal both;
 	}    
 
 
@@ -290,30 +287,45 @@ main .wrap{
 
 
         &__line{
-            width: 1px;
+            width: 3px;
             height: 60px;
             margin-right: auto;
             margin-bottom: 20px;
             margin-left: auto;
             display: block;
             position: relative;
-            background-color: #fff;
+            overflow: hidden;
 
             @include mq( sp ){
                 height: 50px;
             }		
 
+            &:before{
+                content: " ";
+                width: 1px;
+                height: 60px;
+                margin-right: auto;
+                margin-left: auto;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: auto;
+                left: 1px;
+                // left: auto;
+                background-color: #fff;
+            }
+
             
             &:after{
                 content: " ";
-                width: 3px;
+                width: 100%;
                 height: 30px;
                 margin-right: auto;
                 margin-left: auto;
                 position: absolute;
                 bottom: 0;
                 right: 0;
-                left: -1px;
+                left: 0px;
                 display: block;
                 background-color: #fff;
                 // transition: transition();
@@ -540,6 +552,40 @@ main .wrap{
             img{
                 width: 100%;
                 height: auto;
+            }
+        }
+
+
+        .message__name{
+            position: relative;
+        }
+
+        .message__name__sign{
+            width: 381px;
+            display: block;
+            margin-left: auto;
+            height: 80px;
+            margin-top: -30px;
+
+            @include mq( sp ){
+                width: 212px;
+                height: 50px;
+                margin-top: -15px;
+            }
+            .mask,
+            .mask__element{
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+
+            &__text{
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: url(../img/about-message-sign.png) center center no-repeat;
+                background-size: cover;
             }
         }
     }
