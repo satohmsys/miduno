@@ -47,8 +47,10 @@
     }   
 
     button{
+        transition: transition();
         background: none;
         font-size: 1em;
+        appearance: none;        
     }
     
     a,
