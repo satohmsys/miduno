@@ -99,7 +99,8 @@
         }
     }
 }
-.-on{
+.-on,
+.current{
     .mask{
         &:before{
             content: " ";

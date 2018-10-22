@@ -162,8 +162,12 @@ body{
 			}
 		}
 
-		li a.active{
+		li a.active,
+		li a:hover,
+		li a:active,
+		li a:focus		{
 			@include mq( tab, min ){
+				opacity: 1;
 				color: #ffffff;
 				background-color: $red;
 			}
