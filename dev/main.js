@@ -10,6 +10,8 @@ scripts
 */
 import './src/ejs/index.ejs'; 
 import './src/ejs/thanks.ejs'; 
+import './src/ejs/privacy.ejs'; 
+import './src/ejs/agreement.ejs'; 
 /**
 * scss監視設定
 */

@@ -3,14 +3,6 @@
 @import "fonts.scss";
 @import "mixins.scss";
 @import "./../../node_modules/slick-carousel/slick/slick";
-////////////////////////////////////////
-
-
-// top
-
-
-////////////////////////////////////////
-.top{
 
 ///////////////////////////////////////
 
@@ -151,6 +143,15 @@ table{
         @include mq( sp ){
             width: 90px;
         }             
+    }
+}
+
+
+.section--textOnly{
+    .section{
+        &__index::after{
+            display: none;
+        }
     }
 }
 
@@ -1755,5 +1756,3 @@ main .wrap{
     }
 }
 
-
-}

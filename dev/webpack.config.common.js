@@ -132,7 +132,19 @@ let config = {
 			// favicon: './src/img/common/favicon.ico',
 			template: './src/ejs/thanks.ejs',
 			// inject: 'head',
-		}),											
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'privacy.html',
+			// favicon: './src/img/common/favicon.ico',
+			template: './src/ejs/privacy.ejs',
+			// inject: 'head',
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'agreement.html',
+			// favicon: './src/img/common/favicon.ico',
+			template: './src/ejs/agreement.ejs',
+			// inject: 'head',
+		}),
 	],
 	resolve: {
 		extensions: ['.js', '.jsx', '.css', '.scss' ]

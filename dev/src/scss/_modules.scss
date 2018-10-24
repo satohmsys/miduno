@@ -9,6 +9,10 @@
 
 body{
 	position: relative;
+
+	&:not( .top ){
+		padding-top: 15vh;
+	}
 }
 
 
@@ -32,8 +36,11 @@ body{
 	transition-delay: 1s;
 	transform: translateY( -100% );
 
-	@at-root .-is-loadend .siteHeader{
-		transform: translateY( 0% );
+	@at-root{
+		.-is-loadend .siteHeader,
+		body:not( .top ) .siteHeader{
+			transform: translateY( 0% );
+		}
 	}
 	
 
