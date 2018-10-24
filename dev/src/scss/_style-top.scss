@@ -1356,27 +1356,30 @@ main .wrap{
                     padding-left: 20px;
                 }
 
-
-                &:before{
-                        content:"";
-                        width: 0%;
-                        height: 100%;
-                        position: absolute;
-                        z-index: 0;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        background-color: #ffffff;
-                        // left: 0;
-                        transition: transition();
-                }            
+                @include mq(tab, min) {
+                    &:before{
+                            content:"";
+                            width: 0%;
+                            height: 100%;
+                            position: absolute;
+                            z-index: 0;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: #ffffff;
+                            // left: 0;
+                            transition: transition();
+                    }            
+                }
 
                 @include mouseOver(){
-                    &:before{
-                        width: 100%;
-                        right: auto;
-                        left: 0;                    
-                    }                        
+                    @include mq( tab,min ){
+                        &:before{
+                            width: 100%;
+                            right: auto;
+                            left: 0;                    
+                        }                        
+                    }
                 }                
         
 
@@ -1393,12 +1396,11 @@ main .wrap{
                     bottom: 0;
                     transition: transition();
                     transition-property: border-color;
-
-
                     transform: scaleX(0.8) rotate( 135deg ) ;
                     transform-origin: center center;
                     border-top: 2px solid #fff;
                     border-right: 2px solid #fff;
+
                 }           
 
 
@@ -1420,9 +1422,8 @@ main .wrap{
             }
 
             &.-open .recruitInfo__detail__index{
+                color: $basefontColor;                    
                 background-color: #ffffff;
-                color: $basefontColor;
-
 
                 &:after{
                     border-color: $navy;
@@ -1446,6 +1447,10 @@ main .wrap{
                 padding-bottom: 30px;
                 padding-left: 30px;
             }
+            &.-open .recruitInfo__detail__content{
+                background-color: #ffffff;
+                color: $basefontColor;
+            }
 
             table{
                 td,th{
@@ -1461,6 +1466,13 @@ main .wrap{
 
 
         .button{
+
+            @include mq(tab) {
+                margin-right: auto;
+                margin-left: auto;
+
+            }
+            
             &:before{
                 background-color: #ffffff;
             }

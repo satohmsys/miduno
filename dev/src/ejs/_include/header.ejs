@@ -1,7 +1,7 @@
 <header class="siteHeader">
 	<div class="wrap">
 		<h1 class="siteHeader__logo">
-			<img src="<%- $path %>../img/logo.png" width="150" alt="">
+			<a href="<% if( $active='top'){ %>#pageTop<%}else{%>/<%}%>"><img src="<%- $path %>../img/logo.png" width="150" alt=""></a>
 		</h1>
 		<nav class="siteHeader__nav">
 			<%- include( 'nav.ejs' ); %>
