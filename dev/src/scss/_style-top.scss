@@ -589,6 +589,12 @@ main .wrap{
                 background-size: cover;
             }
         }
+
+        .message__profile{
+            border: 1px solid #fff;
+            padding: 1.5em 1.5em 1em;
+            font-size: $fontsize_s;
+        }
     }
 
 
@@ -627,6 +633,13 @@ main .wrap{
     ///// 沿革
     .history {
 
+        .wrap{
+
+            @include mq( tab,min ){
+                max-width: 1000px;
+            }
+        }
+
         &__list__event{
             padding-top: 40px;
             padding-bottom: 40px;
@@ -650,12 +663,22 @@ main .wrap{
                 display: flex;
             }
             &__date{
-                margin-right: 40px;
+                width: 7em;
+                margin-right: 20px;
 
                 @include mq( sp ){
                     flex-shrink: 0;
                     margin-right: 20px;
                 }                 
+            }
+
+            &__text{
+                margin-right: 40px;
+
+                @include mq( sp ){
+                    margin-right: 0px;
+                }                 
+
             }
 
 
@@ -813,6 +836,9 @@ main .wrap{
                 color: $red;
                 font-weight: bold;
 
+                @include mq( tab ){
+                    line-height: 1.75;
+                }
                 @include mq( sp ){
                     font-weight: bold;
                 }                    
@@ -1175,6 +1201,7 @@ main .wrap{
         .area{
             &__index{
                 font-size: 2rem;
+                margin-bottom: 10px;
                 font-weight: bold;
 
                 @include mq( sp ){
@@ -1487,8 +1514,8 @@ main .wrap{
                 }
             }
             @include mq( tab, min ){
-                a{
-                    @include mouseOver(){
+                 @include mouseOver(){
+                    a{
                         color: $navy;
                         // background-color: #ffffff;
                         &:before,

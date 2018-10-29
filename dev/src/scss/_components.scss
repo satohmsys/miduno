@@ -32,11 +32,13 @@
     }
 
     @include mouseOver(){
-        &:before{
-            width: 100%;
-            right: auto;
-            left: 0;
-        }
+            @include mq( tab, min ){        
+                &:before{
+                    width: 100%;
+                    right: auto;
+                    left: 0;
+                }
+            }
     }
 
 
