@@ -1,0 +1,102 @@
+@import "colors.scss";
+@import "variables.scss";
+@import "fonts.scss";
+@import "mixins.scss";
+////////////////////////////////////////
+
+
+// privacypolicy
+
+
+////////////////////////////////////////
+.privacy{
+
+
+///////////////////////////////////////
+
+// nodule
+
+////////////////////////////////////////
+
+.section--pp{
+    & + .section--pp{
+        margin-top: 70px;
+
+        @include mq( sp ){
+            margin-top: 70px;
+        }         
+    }
+
+    &__index{
+        margin-bottom: 50px;
+        position: relative;
+        font-size: $fontsize_l;
+        font-weight: bold;
+        letter-spacing: 0.08em;
+        line-height: 1;
+
+        &:before{
+            content: " ";
+            width: 100px;
+            height: 1px;
+            background-color: $red;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            display: block;
+        }
+
+        @include mq( tab ){
+            font-size: $fontsize_l_sp;
+        }
+        @include mq( sp ){
+            margin-bottom: 25px;
+        }        
+    }
+
+}
+
+
+main{
+   padding-bottom: 25vh; 
+}
+
+
+///////////////////////////////////////
+
+// style
+
+////////////////////////////////////////
+
+
+.scrollTop{
+    display: none;
+}
+
+
+
+.section--contact{
+    margin-top: $space_l;
+    padding: $space_s;
+    text-align: center;
+    border: 1px solid $color_border;
+
+    @include mq( tab ){
+        margin-top: $space_l_sp;
+    }    
+
+    &__index{
+        font-weight: bold;
+    }
+
+
+    .button a{
+        @include mouseOver(){
+            color: #ffffff;
+        }
+    }
+}
+
+
+
+
+}
