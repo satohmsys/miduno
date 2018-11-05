@@ -416,7 +416,7 @@ body{
 		align-items: center;
 		justify-content: space-between;
 
-		@include mq( sp ){
+		@include mq( tab ){
 			flex-direction: column;
 		}
 	}
@@ -429,7 +429,7 @@ body{
 		flex-direction: row;
 		align-items: center;
 
-		@include mq( sp ){
+		@include mq( tab ){
 			flex-direction: column;
 		}
 
@@ -438,7 +438,7 @@ body{
 			line-height: 1;
 			margin-right: 50px;
 
-			@include mq( sp ){
+			@include mq( tab ){
 				margin-right: 0;
 				margin-bottom: 30px;
 			}
@@ -470,7 +470,7 @@ body{
 		margin-left: auto;
 		font-size: $fontsize_s;
 
-		@include mq( sp ){
+		@include mq( tab ){
 			margin-left: 0;
 		}		
 	}

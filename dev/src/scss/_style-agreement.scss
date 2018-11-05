@@ -5,11 +5,11 @@
 ////////////////////////////////////////
 
 
-// privacypolicy
+// agreement
 
 
 ////////////////////////////////////////
-.privacy{
+.agreement{
 
 
 ///////////////////////////////////////
@@ -53,6 +53,31 @@
         }        
     }
 
+
+    ol{
+        padding-left: 1em;
+        counter-reset: c;
+
+        li{
+            list-style: none;
+            counter-increment: c;
+            padding-left: 1em;
+            text-indent: -1.25em;
+
+            &:before{
+                content: counter( c ) ".";
+                font-family: $fontFamily_en;
+                color: $red;
+            }
+        }
+    }
+
+
+    a{
+        text-decoration: underline;
+        color: $red;
+    }
+
 }
 
 
@@ -67,32 +92,6 @@
 // .scrollTop{
 //     display: none;
 // }
-
-
-
-.section--contact{
-    margin-top: $space_l;
-    padding: $space_s;
-    text-align: center;
-    border: 1px solid $color_border;
-
-    @include mq( tab ){
-        margin-top: $space_l_sp;
-    }    
-
-    &__index{
-        font-weight: bold;
-    }
-
-
-    .button a{
-        @include mouseOver(){
-            color: #ffffff;
-        }
-    }
-}
-
-
 
 
 }
