@@ -4,21 +4,6 @@ import 'slick-carousel';
 
 
 $( function(){
-	
-	// $('.mv__imgs').slick({
-	// 	arrows: false,
-	// 	autoplay: true,
-	// 	dots: true,
-	// 	pauseOnFocus: false,
-	// 	pauseOnHover: false,
-	// 	pauseOnDotsHover: false,
-	// 	infinite: true,
-	// 	fade: true,
-	// 	pause: 4000,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	speed: 2000,
-	// });
 	$('.brands__imgs').slick({
 		arrows: true,
 		autoplay: false,

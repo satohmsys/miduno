@@ -214,9 +214,9 @@ main .wrap{
             width: 100%;
             height: auto;
             display: block;
-            transform: scale(1.1);
+            // transform: scale(1.25);
             transform-origin: center center;
-            transition: all 6.2s linear 0s;
+            // transition: all 3s linear 0s;
         }
 
         .slick-slide > div {
@@ -227,7 +227,7 @@ main .wrap{
         }
     }
 	@at-root .-is-loadend .mv__imgs.slick-initialized .slick-current>div {
-		animation: mvZoom 7s linear 0s 1 normal both;
+		animation: mvZoom 5.5s linear 0s 1 normal both;
 	}    
 
 
