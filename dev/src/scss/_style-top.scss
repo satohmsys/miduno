@@ -149,6 +149,9 @@ table{
 
 .section--textOnly{
     .section{
+        &__index{
+            font-size: 3em;
+        }
         &__index::after{
             display: none;
         }
