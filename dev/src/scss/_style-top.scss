@@ -1489,9 +1489,9 @@ main .wrap{
                 padding-right: 30px;
                 padding-bottom: 30px;
                 padding-left: 30px;
+                background-color: #ffffff;
             }
             &.-open .recruitInfo__detail__content{
-                background-color: #ffffff;
                 color: $basefontColor;
             }
 
@@ -1503,6 +1503,11 @@ main .wrap{
                 th{
                     width: 80px;
                     border-color: $navy;
+                    vertical-align: top;
+                }
+
+                td p:first-child{
+                    margin-top: 0;
                 }
             }
         }
@@ -1541,6 +1546,27 @@ main .wrap{
 
                 }
             }                
+        }
+
+
+        ////// style
+        ul.none {
+            li{
+                list-style: none;
+            }
+        }
+        ul.inline {
+            li{
+                list-style: none;
+                display: inline;
+                padding-right: 0.5em;
+
+                &:not( :last-child ):after{
+                    content: ",";
+                    display: inline-block;
+                    vertical-align: bottom;
+                }
+            }
         }
     }
 }
