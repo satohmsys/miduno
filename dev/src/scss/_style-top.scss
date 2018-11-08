@@ -119,13 +119,23 @@
 table{
     width: 100%;
     border-collapse: collapse;
+    line-height: 1.45;
+
+    a{
+        color: $red;
+        transition: none;
+        @include mouseOver(){
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
 
     tr{
     }
 
     td,th{
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         border-bottom: 1px solid $color_border;
 
         @include mq( sp ){
