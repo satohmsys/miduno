@@ -44,10 +44,10 @@ getScrollVal( function( scrollVal ){
 		if( $section_offsets < scrollVal ){
 			let $id = $section.attr( 'id' );
 
-			$( '.siteHeader__nav li a' ).removeClass( 'active' );
-			$( '.siteHeader__nav li a[ href="#' + $id + '"]' ).addClass( 'active' );
+			$( '.siteHeader__nav li' ).removeClass( 'active' );
+			$( '.siteHeader__nav li a[ href="#' + $id + '"]' ).parent().addClass( 'active' );
 		} else if ( scrollVal < 400) {
-			 $('.siteHeader__nav li a').removeClass('active')
+			 $('.siteHeader__nav li').removeClass('active')
 		}
 	} )
 

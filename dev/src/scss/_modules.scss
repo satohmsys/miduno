@@ -152,6 +152,24 @@ body{
 		li{
 			list-style: none;
 			
+			@include mq( tab, min ){
+				position: relative;
+				overflow: hidden;
+				&:before{
+					content:" ";
+					width: 0;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					transition: transition();
+					background-color: $red;
+				}
+				@include mouseOver(){
+				}				
+			}
+			
 			
 			&:not( :last-child ){
 				margin-right: 40px;
@@ -173,14 +191,18 @@ body{
 			}
 		}
 
-		li a.active,
-		li a:hover,
-		li a:active,
-		li a:focus		{
-			@include mq( tab, min ){
-				opacity: 1;
-				color: #ffffff;
-				background-color: $red;
+		li.active,
+		li:hover,
+		li:active,
+		li:focus{
+			color: #ffffff;
+
+			&:before{
+				@include mq( tab, min ){
+					width: 100%;
+					right: auto;				
+					left: 0;
+				}
 			}
 		}
 
@@ -224,11 +246,11 @@ body{
                 }				
 
 			}
-			@include mq( tab, min ){
-				@include mouseOver(){
-					opacity: 0.75;
-				}				
-			}
+			// @include mq( tab, min ){
+			// 	@include mouseOver(){
+			// 		opacity: 0.75;
+			// 	}				
+			// }
 		}		
 			
 	}
