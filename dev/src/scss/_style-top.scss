@@ -122,10 +122,8 @@ table{
     line-height: 1.45;
 
     a{
-        color: $red;
         transition: none;
         @include mouseOver(){
-            color: inherit;
             text-decoration: underline;
         }
     }
