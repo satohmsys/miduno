@@ -1,3 +1,90 @@
+<style>
+.loadingAnim{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    color: #ffffff;
+    transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86) 2s;
+    background-color: #910000;
+}
+.loadingAnim:before{
+    content: " ";
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.5s;
+    background-color: #ffffff;
+}
+.-is-loaded .loadingAnim{
+    transform: translateX(100%);
+}
+.-is-loaded .loadingAnim:before{
+    width: 100%;
+}
+
+
+.loadingAnim__copy{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4em;
+}
+@media screen and ( max-width: 768px ){
+    .loadingAnim{
+        font-size: 1.14285714em;
+    }
+}
+
+
+.loadingAnim .mask{
+overflow: hidden;
+display: inline-block;
+position: relative;
+}
+
+.loadingAnim .mask:before{
+    content: " ";
+    width: 0%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.15s;
+    background-color:#fff;
+}
+.loadingAnim .mask__element{
+    white-space: nowrap;
+    display: inline-block;
+    transform: translateX( -100% );
+    transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.235s;
+}
+.-is-ready .loadingAnim .mask:before{
+    left: auto;
+    right: 0;
+    animation: maskmove 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.15s 1 normal;
+}
+.-is-ready .loadingAnim .mask__element{
+    display: inherit;
+    transform: translateX( 0% );
+}
+</style>
 <div class="loadingAnim">
     <div class="loadingAnim__copy">
         <div class="loadingAnim__copy__maskElement">
