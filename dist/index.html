@@ -35,7 +35,94 @@
   <link rel="icon" href="assets/img/favicon.png" sizes="144x144">
 <link href="/assets/css/style.css" rel="stylesheet"></head>
 <body id="pageTop" class="top">
-	<div class="loadingAnim">
+	<style>
+.loadingAnim{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    color: #ffffff;
+    transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86) 2s;
+    background-color: #910000;
+}
+.loadingAnim:before{
+    content: " ";
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.5s;
+    background-color: #ffffff;
+}
+.-is-loaded .loadingAnim{
+    transform: translateX(100%);
+}
+.-is-loaded .loadingAnim:before{
+    width: 100%;
+}
+
+
+.loadingAnim__copy{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4em;
+}
+@media screen and ( max-width: 768px ){
+    .loadingAnim{
+        font-size: 1.14285714em;
+    }
+}
+
+
+.loadingAnim .mask{
+overflow: hidden;
+display: inline-block;
+position: relative;
+}
+
+.loadingAnim .mask:before{
+    content: " ";
+    width: 0%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.15s;
+    background-color:#fff;
+}
+.loadingAnim .mask__element{
+    white-space: nowrap;
+    display: inline-block;
+    transform: translateX( -100% );
+    transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.235s;
+}
+.-is-ready .loadingAnim .mask:before{
+    left: auto;
+    right: 0;
+    animation: maskmove 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.15s 1 normal;
+}
+.-is-ready .loadingAnim .mask__element{
+    display: inherit;
+    transform: translateX( 0% );
+}
+</style>
+<div class="loadingAnim">
     <div class="loadingAnim__copy">
         <div class="loadingAnim__copy__maskElement">
             <span class="mask"><span class="mask__element">価値あるリユースで、経済の循環を。</span></span>
@@ -68,11 +155,11 @@
 			価値あるリユースで、<br class="-only-sp">経済の循環を。
 		</h2>
 		<div class="mv__imgs">
-			<div><img src="/assets/img/mv-1.jpg" srcset="/assets/img/_sp/mv-1.jpg 480w, /assets/img/mv-1.jpg" alt=""></div>
-			<div><img src="/assets/img/mv-2.jpg" srcset="/assets/img/_sp/mv-2.jpg 480w, /assets/img/mv-2.jpg" alt=""></div>
-			<div><img src="/assets/img/mv-3.jpg" srcset="/assets/img/_sp/mv-3.jpg 480w, /assets/img/mv-3.jpg" alt=""></div>
-			<div><img src="/assets/img/mv-4.jpg" srcset="/assets/img/_sp/mv-4.jpg 480w, /assets/img/mv-4.jpg" alt=""></div>
-			<div><img src="/assets/img/mv-5.jpg" srcset="/assets/img/_sp/mv-5.jpg 480w, /assets/img/mv-5.jpg" alt=""></div>
+			<div><img class="lazyload" data-src="/assets/img/mv-1.jpg" data-srcset="/assets/img/_sp/mv-1.jpg 480w, /assets/img/mv-1.jpg" alt=""></div>
+			<div><img class="lazyload" data-src="/assets/img/mv-2.jpg" data-srcset="/assets/img/_sp/mv-2.jpg 480w, /assets/img/mv-2.jpg" alt=""></div>
+			<div><img class="lazyload" data-src="/assets/img/mv-3.jpg" data-srcset="/assets/img/_sp/mv-3.jpg 480w, /assets/img/mv-3.jpg" alt=""></div>
+			<div><img class="lazyload" data-src="/assets/img/mv-4.jpg" data-srcset="/assets/img/_sp/mv-4.jpg 480w, /assets/img/mv-4.jpg" alt=""></div>
+			<div><img class="lazyload" data-src="/assets/img/mv-5.jpg" data-srcset="/assets/img/_sp/mv-5.jpg 480w, /assets/img/mv-5.jpg" alt=""></div>
 		</div>
 		<div class="scrollBottom">
 			<span class="scrollBottom__text">SCROLL</span>
@@ -89,7 +176,7 @@
 				<section class="section__mv">
 					<div class="mask">
 						<figure class="section__mv__img mask__element">
-							<img src="/assets/img/about-img.jpg" srcset="/assets/img/_sp/about-img.jpg 468w, /assets/img/about-img.jpg" alt="">
+							<img class="lazyload" data-src="/assets/img/about-img.jpg" data-srcset="/assets/img/_sp/about-img.jpg 468w, /assets/img/about-img.jpg" alt="">
 						</figure>
 					</div>
 					<section class="section__mv__text">
@@ -198,7 +285,7 @@
 								</div>
 							</section>
 							<div class="message__img ">
-								<span class="mask"><span class="mask__element"><img src="/assets/img/about-message-img.jpg" alt=""></span></span>
+								<span class="mask"><span class="mask__element"><img class="lazyload" data-src="/assets/img/about-message-img.jpg" alt=""></span></span>
 							</div>
 						</div>
 					</section>
@@ -209,7 +296,7 @@
 								<span>売り上げの過去遷移</span>
 							</h3>
 							<figure>
-								<img src="/assets/img/about-sell-chart.png" alt="">
+								<img class="lazyload" data-src="/assets/img/about-sell-chart.png" alt="">
 							</figure>
 						</div>
 					</section>
@@ -233,10 +320,10 @@
 									</div>
 									<div class="history__list__event__images">
 										<figure class="history__list__event__image">
-											<img src="/assets/img/about-history-2008.jpg" alt="">
+											<img class="lazyload" data-src="/assets/img/about-history-2008.jpg" alt="">
 										</figure>
 										<figure class="history__list__event__image">
-											<img src="/assets/img/about-history-2008-2.jpg" alt="">
+											<img class="lazyload" data-src="/assets/img/about-history-2008-2.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -302,10 +389,10 @@
 									</div>
 									<div class="history__list__event__images">
 										<figure class="history__list__event__image">
-											<img src="/assets/img/about-history-2014.jpg" alt="">
+											<img class="lazyload" data-src="/assets/img/about-history-2014.jpg" alt="">
 										</figure>
 										<figure class="history__list__event__image">
-											<img src="/assets/img/about-history-2014-2.jpg" alt="">
+											<img class="lazyload" data-src="/assets/img/about-history-2014-2.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -390,10 +477,10 @@
 									</div>
 									<div class="history__list__event__images">
 										<figure class="history__list__event__image">
-											<img src="/assets/img/about-history-2018.jpg" alt="">
+											<img class="lazyload" data-src="/assets/img/about-history-2018.jpg" alt="">
 										</figure>
 										<figure class="history__list__event__image">
-											<img src="/assets/img/about-history-2018-2.jpg" alt="">
+											<img class="lazyload" data-src="/assets/img/about-history-2018-2.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -415,7 +502,7 @@
 				<section class="section__mv">
 					<div class="mask">
 						<figure class="section__mv__img mask__element">
-							<img src="/assets/img/service-img.jpg" srcset="/assets/img/_sp/service-img.jpg 468w, /assets/img/service-img.jpg" alt="">
+							<img class="lazyload" data-src="/assets/img/service-img.jpg" data-srcset="/assets/img/_sp/service-img.jpg 468w, /assets/img/service-img.jpg" alt="">
 						</figure>
 					</div>
 					<section class="section__mv__text">
@@ -448,7 +535,7 @@
 						<section class="business__main businessShowLayout ">
 							<div class="businessShowLayout__img">
 								<figure>
-									<img src="/assets/img/service-business-img.jpg" alt="">
+									<img class="lazyload" data-src="/assets/img/service-business-img.jpg" alt="">
 								</figure>
 							</div>
 							<div class="businessShowLayout__text">
@@ -479,7 +566,7 @@
 									</div>
 									<div class="business__detail__thing__image">
 										<figure>
-											<img src="/assets/img/service-aacd-img.jpg" alt="">
+											<img class="lazyload" data-src="/assets/img/service-aacd-img.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -499,7 +586,7 @@
 									</div>
 									<div class="business__detail__thing__image">
 										<figure>
-											<img src="/assets/img/service-taxfree-img.jpg" alt="">
+											<img class="lazyload" data-src="/assets/img/service-taxfree-img.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -521,7 +608,7 @@
 									</div>
 									<div class="business__detail__thing__image">
 										<figure>
-											<img src="/assets/img/service-otakara-img.jpg" alt="">
+											<img class="lazyload" data-src="/assets/img/service-otakara-img.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -558,7 +645,7 @@
 								<a href=""></a>
 							</div>
 							<div class="business__movie__img">
-								<img src="/assets/img/service-movie.jpg" alt="">
+								<img class="lazyload" data-src="/assets/img/service-movie.jpg" alt="">
 							</div>
 						</div>
 						<!-- *** 取り扱いブランド -->
@@ -572,57 +659,57 @@
 							<div class="business__brands__content">
 								<ul class="brands">
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-hermes.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-hermes.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-lv.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-lv.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-chanel.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-chanel.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-gucchi.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-gucchi.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-prada.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-prada.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-coach.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-coach.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-cartier.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-cartier.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-bvlgari.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-bvlgari.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-tiffany.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-tiffany.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-rolex.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-rolex.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-omega.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-omega.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img src="/assets/img/service-brand-logo-burberrys.png" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-logo-burberrys.png" alt="">
 									</li>
 								</ul>
 								<div class="brands__imgs">
 									<div class="brands__img">
-										<img src="/assets/img/service-brand-img-1.jpg" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-img-1.jpg" alt="">
 									</div>
 									<div class="brands__img">
-										<img src="/assets/img/service-brand-img-2.jpg" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-img-2.jpg" alt="">
 									</div>
 									<div class="brands__img">
-										<img src="/assets/img/service-brand-img-3.jpg" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-img-3.jpg" alt="">
 									</div>
 									<div class="brands__img">
-										<img src="/assets/img/service-brand-img-4.jpg" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-img-4.jpg" alt="">
 									</div>
 									<div class="brands__img">
-										<img src="/assets/img/service-brand-img-5.jpg" alt="">
+										<img class="lazyload" data-src="/assets/img/service-brand-img-5.jpg" alt="">
 									</div>
 								</div>
 							</div>
@@ -633,7 +720,7 @@
 							<section class="business__main businessShowLayout ">
 								<div class="businessShowLayout__img">
 									<figure>
-										<img src="/assets/img/service-foreign-img.jpg" alt="">
+										<img class="lazyload" data-src="/assets/img/service-foreign-img.jpg" alt="">
 									</figure>
 								</div>
 								<div class="businessShowLayout__text">
@@ -665,14 +752,14 @@
 										</div>
 										<div class="business__detail__thing__image">
 											<figure>
-												<img src="/assets/img/service-foreign-loov.jpg" alt="">
+												<img class="lazyload" data-src="/assets/img/service-foreign-loov.jpg" alt="">
 											</figure>
 										</div>
 									</li>
 								</ul>
 								<div class="business__oversea__imgs">
-									<figure><img src="/assets/img/service-foreign-img-1.jpg" alt=""></figure>
-									<figure><img src="/assets/img/service-foreign-img-2.jpg" alt=""></figure>
+									<figure><img class="lazyload" data-src="/assets/img/service-foreign-img-1.jpg" alt=""></figure>
+									<figure><img class="lazyload" data-src="/assets/img/service-foreign-img-2.jpg" alt=""></figure>
 								</div>
 							</section>							
 						</section>
@@ -691,7 +778,7 @@
 				<section class="section__mv">
 					<div class="mask">
 						<figure class="section__mv__img mask__element">
-							<img src="/assets/img/company-img.jpg" srcset="/assets/img/_sp/company-img.jpg 468w, /assets/img/company-img.jpg" alt="">
+							<img class="lazyload" data-src="/assets/img/company-img.jpg" data-srcset="/assets/img/_sp/company-img.jpg 468w, /assets/img/company-img.jpg" alt="">
 						</figure>
 					</div>
 				</section>
@@ -894,7 +981,7 @@
 									<ul class="areas">
 										<li class="area__detail" id="shop-ginza">
 											<figure class="area__detail__img">
-												<img src="/assets/img/company-shoplist-kanto-ginza.jpg" width="290" alt="">
+												<img class="lazyload" data-src="/assets/img/company-shoplist-kanto-ginza.jpg" width="290" alt="">
 											</figure>
 											<h5 class="area__detail__index">
 												おたからや 6 銀座店
@@ -926,7 +1013,7 @@
 										</li>
 										<li class="area__detail" id="shop-ueno">
 											<figure class="area__detail__img">
-												<img src="/assets/img/company-shoplist-kanto-ueno.jpg" width="290" alt="">
+												<img class="lazyload" data-src="/assets/img/company-shoplist-kanto-ueno.jpg" width="290" alt="">
 											</figure>
 											<h5 class="area__detail__index">
 												おたからや 上野御徒町店
@@ -968,7 +1055,7 @@
 									<ul class="areas">
 										<li class="area__detail" id="shop-umeda">
 											<figure class="area__detail__img">
-												<img src="/assets/img/company-shoplist-kanto-umeda.jpg" width="290" alt="">
+												<img class="lazyload" data-src="/assets/img/company-shoplist-kanto-umeda.jpg" width="290" alt="">
 											</figure>
 											<h5 class="area__detail__index">
 												おたからや 梅田店
@@ -1000,7 +1087,7 @@
 										</li>
 										<li class="area__detail" id="shop-shinsaibashi">
 											<figure class="area__detail__img">
-												<img src="/assets/img/company-shoplist-kanto-shinsaibashi.jpg" width="290" alt="">
+												<img class="lazyload" data-src="/assets/img/company-shoplist-kanto-shinsaibashi.jpg" width="290" alt="">
 											</figure>
 											<h5 class="area__detail__index">
 												おたからや 心斎橋店
