@@ -1,4 +1,8 @@
 import $ from 'jquery';
+import 'slick-carousel';
+
+import 'lazysizes/lazysizes.min';
+
 
 let $w = $(window),
 	$body = $('body'),
@@ -107,6 +111,7 @@ if ($loadingAnim.length ) {
 				}, 1500); 
 			}
 			document.body.classList.add('-is-loadend');
+		
 			$('.mv__imgs').slick({
 				arrows: false,
 				autoplay: true,

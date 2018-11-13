@@ -1,4 +1,5 @@
 import 'babel-polyfill';
+
 /*************************
 
 scripts
@@ -12,13 +13,15 @@ import './src/ejs/index.ejs';
 import './src/ejs/thanks.ejs'; 
 import './src/ejs/privacy.ejs'; 
 import './src/ejs/agreement.ejs'; 
+
+
 /**
 * scss監視設定
 */
 import './src/scss/style.scss';
 
-import common from './src/js/common.js';
-import top from './src/js/top.js';
+import './src/js/common.js';
+import './src/js/top.js';
 
 
 // common();
