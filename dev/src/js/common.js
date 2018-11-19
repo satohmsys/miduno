@@ -109,7 +109,7 @@ if ($loadingAnim.length ) {
 			if (e.propertyName == 'transform'){
 				setTimeout(() => {
 					$loadingAnim.remove();
-				}, 1500); 
+				}, 500); 
 			}
 			document.body.classList.add('-is-loadend');
 		
