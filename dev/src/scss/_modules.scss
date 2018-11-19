@@ -40,11 +40,16 @@ body{
 	transition-delay: 1s;
 	transform: translateY( -100% );
 
+	@media print {
+		position: static;
+	}
+
 	@at-root{
 		.-is-loadend .siteHeader,
 		body:not( .top ) .siteHeader{
 			transform: translateY( 0% );
 		}
+
 	}
 	
 
@@ -89,10 +94,18 @@ body{
 		 flex-direction: row;
 		 justify-content: space-between;
 		 align-items: center;
+		 transition: transition();
 		
+		@at-root .-isScrolled .siteHeader > .wrap {
+			height: 60px;
+		}
 
 		@include mq( sp ){
 			height: 60px;
+
+			@at-root .-isScrolled .siteHeader>.wrap {
+				height: 40px;
+			}
 		} 	
 	 }
 
