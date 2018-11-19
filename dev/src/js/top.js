@@ -2,8 +2,11 @@ import $ from 'jquery';
 import { getScrollVal, $w } from './common.js';
 import 'slick-carousel';
 
+var $hh = $('.siteHeader').outerHeight();
 
 $( function(){
+
+
 	$('.brands__imgs').slick({
 		arrows: true,
 		autoplay: false,
@@ -36,7 +39,7 @@ $( function(){
 
 getScrollVal( function( scrollVal ){
 	let $sections = $( '.section--catetory' ),
-		$scrollBottom = scrollVal + $w.height()*1.1;
+		$scrollBottom = scrollVal + $w.height() + $hh;
 
 	$.each($sections, function( e ){
 		let $section = $( this ),
