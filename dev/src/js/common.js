@@ -2,6 +2,7 @@ import $ from 'jquery';
 import 'slick-carousel';
 
 import 'lazysizes/lazysizes.min';
+import 'lazysizes/plugins/print/ls.print.min';
 
 
 let $w = $(window),
