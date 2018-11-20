@@ -51,11 +51,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.4em;
+    font-size: 2.4em!important;
   }
   @media screen and (max-width: 768px) {
     .loadingAnim__copy {
-      font-size: 1.14285714em;
+      font-size: 1.14285714em!important;
     }
   }
   .loadingAnim .mask {
@@ -63,7 +63,7 @@
     display: inline-block;
     position: relative;
   }
-  .loadingAnim .mask:before {
+  /* .loadingAnim .mask:before {
     content: " ";
     width: 0%;
     height: 100%;
@@ -71,7 +71,6 @@
     position: absolute;
     z-index: 2;
     left: 0;
-    /* transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.15s; */
     background-color: #fff;
   }
   .loadingAnim .mask__element {
@@ -79,7 +78,7 @@
     display: inline-block;
     transform: translateX(-100%);
     transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.235s;
-  }
+  } */
   .-is-ready .loadingAnim .mask:before {
     /* left: auto;
     right: 0; */
