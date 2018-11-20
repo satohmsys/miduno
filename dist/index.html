@@ -54,11 +54,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.4em;
+    font-size: 2.4em!important;
   }
   @media screen and (max-width: 768px) {
     .loadingAnim__copy {
-      font-size: 1.14285714em;
+      font-size: 1.14285714em!important;
     }
   }
   .loadingAnim .mask {
@@ -66,7 +66,7 @@
     display: inline-block;
     position: relative;
   }
-  .loadingAnim .mask:before {
+  /* .loadingAnim .mask:before {
     content: " ";
     width: 0%;
     height: 100%;
@@ -74,7 +74,6 @@
     position: absolute;
     z-index: 2;
     left: 0;
-    /* transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.15s; */
     background-color: #fff;
   }
   .loadingAnim .mask__element {
@@ -82,7 +81,7 @@
     display: inline-block;
     transform: translateX(-100%);
     transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.235s;
-  }
+  } */
   .-is-ready .loadingAnim .mask:before {
     /* left: auto;
     right: 0; */
@@ -150,11 +149,11 @@
 			価値あるリユースで、<br class="-only-sp">経済の循環を。
 		</h2>
 		<div class="mv__imgs">
-			<div><img class="lazyload" data-src="/assets/img/mv-1.jpg" data-srcset="/assets/img/_sp/mv-1.jpg 480w, /assets/img/mv-1.jpg" alt=""></div>
-			<div><img class="lazyload" data-src="/assets/img/mv-2.jpg" data-srcset="/assets/img/_sp/mv-2.jpg 480w, /assets/img/mv-2.jpg" alt=""></div>
-			<div><img class="lazyload" data-src="/assets/img/mv-3.jpg" data-srcset="/assets/img/_sp/mv-3.jpg 480w, /assets/img/mv-3.jpg" alt=""></div>
-			<div><img class="lazyload" data-src="/assets/img/mv-4.jpg" data-srcset="/assets/img/_sp/mv-4.jpg 480w, /assets/img/mv-4.jpg" alt=""></div>
-			<div><img class="lazyload" data-src="/assets/img/mv-5.jpg" data-srcset="/assets/img/_sp/mv-5.jpg 480w, /assets/img/mv-5.jpg" alt=""></div>
+			<div><img class="lazyload" src="/assets/img/mv-1.jpg" srcset="/assets/img/_sp/mv-1.jpg 480w, /assets/img/mv-1.jpg" alt=""></div>
+			<div><img class="lazyload" src="/assets/img/mv-2.jpg" srcset="/assets/img/_sp/mv-2.jpg 480w, /assets/img/mv-2.jpg" alt=""></div>
+			<div><img class="lazyload" src="/assets/img/mv-3.jpg" srcset="/assets/img/_sp/mv-3.jpg 480w, /assets/img/mv-3.jpg" alt=""></div>
+			<div><img class="lazyload" src="/assets/img/mv-4.jpg" srcset="/assets/img/_sp/mv-4.jpg 480w, /assets/img/mv-4.jpg" alt=""></div>
+			<div><img class="lazyload" src="/assets/img/mv-5.jpg" srcset="/assets/img/_sp/mv-5.jpg 480w, /assets/img/mv-5.jpg" alt=""></div>
 		</div>
 		<div class="scrollBottom">
 			<span class="scrollBottom__text">SCROLL</span>
@@ -171,7 +170,7 @@
 				<section class="section__mv">
 					<div class="mask">
 						<figure class="section__mv__img mask__element">
-							<img class="lazyload" data-src="/assets/img/about-img.jpg" data-srcset="/assets/img/_sp/about-img.jpg 468w, /assets/img/about-img.jpg" alt="">
+							<img class="lazyload" src="/assets/img/about-img.jpg" srcset="/assets/img/_sp/about-img.jpg 468w, /assets/img/about-img.jpg" alt="">
 						</figure>
 					</div>
 					<section class="section__mv__text">
@@ -280,7 +279,7 @@
 								</div>
 							</section>
 							<div class="message__img ">
-								<span class="mask"><span class="mask__element"><img class="lazyload" data-src="/assets/img/about-message-img.jpg" alt=""></span></span>
+								<span class="mask"><span class="mask__element"><img class="lazyload" src="/assets/img/about-message-img.jpg" alt=""></span></span>
 							</div>
 						</div>
 					</section>
@@ -291,7 +290,7 @@
 								<span>売り上げの過去遷移</span>
 							</h3>
 							<figure>
-								<img class="lazyload" data-src="/assets/img/about-sell-chart.png" alt="">
+								<img class="lazyload" src="/assets/img/about-sell-chart.png" alt="">
 							</figure>
 						</div>
 					</section>
@@ -315,10 +314,10 @@
 									</div>
 									<div class="history__list__event__images">
 										<figure class="history__list__event__image">
-											<img class="lazyload" data-src="/assets/img/about-history-2008.jpg" alt="">
+											<img class="lazyload" src="/assets/img/about-history-2008.jpg" alt="">
 										</figure>
 										<figure class="history__list__event__image">
-											<img class="lazyload" data-src="/assets/img/about-history-2008-2.jpg" alt="">
+											<img class="lazyload" src="/assets/img/about-history-2008-2.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -384,10 +383,10 @@
 									</div>
 									<div class="history__list__event__images">
 										<figure class="history__list__event__image">
-											<img class="lazyload" data-src="/assets/img/about-history-2014.jpg" alt="">
+											<img class="lazyload" src="/assets/img/about-history-2014.jpg" alt="">
 										</figure>
 										<figure class="history__list__event__image">
-											<img class="lazyload" data-src="/assets/img/about-history-2014-2.jpg" alt="">
+											<img class="lazyload" src="/assets/img/about-history-2014-2.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -472,10 +471,10 @@
 									</div>
 									<div class="history__list__event__images">
 										<figure class="history__list__event__image">
-											<img class="lazyload" data-src="/assets/img/about-history-2018.jpg" alt="">
+											<img class="lazyload" src="/assets/img/about-history-2018.jpg" alt="">
 										</figure>
 										<figure class="history__list__event__image">
-											<img class="lazyload" data-src="/assets/img/about-history-2018-2.jpg" alt="">
+											<img class="lazyload" src="/assets/img/about-history-2018-2.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -497,7 +496,7 @@
 				<section class="section__mv">
 					<div class="mask">
 						<figure class="section__mv__img mask__element">
-							<img class="lazyload" data-src="/assets/img/service-img.jpg" data-srcset="/assets/img/_sp/service-img.jpg 468w, /assets/img/service-img.jpg" alt="">
+							<img class="lazyload" src="/assets/img/service-img.jpg" srcset="/assets/img/_sp/service-img.jpg 468w, /assets/img/service-img.jpg" alt="">
 						</figure>
 					</div>
 					<section class="section__mv__text">
@@ -530,7 +529,7 @@
 						<section class="business__main businessShowLayout ">
 							<div class="businessShowLayout__img">
 								<figure>
-									<img class="lazyload" data-src="/assets/img/service-business-img.jpg" alt="">
+									<img class="lazyload" src="/assets/img/service-business-img.jpg" alt="">
 								</figure>
 							</div>
 							<div class="businessShowLayout__text">
@@ -561,7 +560,7 @@
 									</div>
 									<div class="business__detail__thing__image">
 										<figure>
-											<img class="lazyload" data-src="/assets/img/service-aacd-img.jpg" alt="">
+											<img class="lazyload" src="/assets/img/service-aacd-img.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -581,7 +580,7 @@
 									</div>
 									<div class="business__detail__thing__image">
 										<figure>
-											<img class="lazyload" data-src="/assets/img/service-taxfree-img.jpg" alt="">
+											<img class="lazyload" src="/assets/img/service-taxfree-img.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -603,7 +602,7 @@
 									</div>
 									<div class="business__detail__thing__image">
 										<figure>
-											<img class="lazyload" data-src="/assets/img/service-otakara-img.jpg" alt="">
+											<img class="lazyload" src="/assets/img/service-otakara-img.jpg" alt="">
 										</figure>
 									</div>
 								</li>
@@ -640,7 +639,7 @@
 								<a href=""></a>
 							</div>
 							<div class="business__movie__img">
-								<img class="lazyload" data-src="/assets/img/service-movie.jpg" alt="">
+								<img class="lazyload" src="/assets/img/service-movie.jpg" alt="">
 							</div>
 						</div>
 						<!-- *** 取り扱いブランド -->
@@ -649,62 +648,62 @@
 								<span>取り扱いブランド</span>
 							</h3>
 							<p class="business__brands__subindex">
-								弊社でお取り扱いしているブランドの一部をご紹介しています。
+								弊社でお取り扱いしている主なブランドの一部をご紹介しています。
 							</p>
 							<div class="business__brands__content">
 								<ul class="brands">
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-hermes.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-hermes.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-lv.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-lv.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-chanel.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-chanel.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-gucchi.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-gucchi.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-prada.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-prada.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-coach.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-coach.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-cartier.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-cartier.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-bvlgari.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-bvlgari.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-tiffany.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-tiffany.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-rolex.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-rolex.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-omega.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-omega.png" alt="">
 									</li>
 									<li class="brands__brandbox">
-										<img class="lazyload" data-src="/assets/img/service-brand-logo-burberrys.png" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-logo-burberrys.png" alt="">
 									</li>
 								</ul>
 								<div class="brands__imgs">
 									<div class="brands__img">
-										<img class="lazyload" data-src="/assets/img/service-brand-img-1.jpg" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-img-1.jpg" alt="">
 									</div>
 									<div class="brands__img">
-										<img class="lazyload" data-src="/assets/img/service-brand-img-2.jpg" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-img-2.jpg" alt="">
 									</div>
 									<div class="brands__img">
-										<img class="lazyload" data-src="/assets/img/service-brand-img-3.jpg" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-img-3.jpg" alt="">
 									</div>
 									<div class="brands__img">
-										<img class="lazyload" data-src="/assets/img/service-brand-img-4.jpg" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-img-4.jpg" alt="">
 									</div>
 									<div class="brands__img">
-										<img class="lazyload" data-src="/assets/img/service-brand-img-5.jpg" alt="">
+										<img class="lazyload" src="/assets/img/service-brand-img-5.jpg" alt="">
 									</div>
 								</div>
 							</div>
@@ -715,7 +714,7 @@
 							<section class="business__main businessShowLayout ">
 								<div class="businessShowLayout__img">
 									<figure>
-										<img class="lazyload" data-src="/assets/img/service-foreign-img.jpg" alt="">
+										<img class="lazyload" src="/assets/img/service-foreign-img.jpg" alt="">
 									</figure>
 								</div>
 								<div class="businessShowLayout__text">
@@ -747,14 +746,14 @@
 										</div>
 										<div class="business__detail__thing__image">
 											<figure>
-												<img class="lazyload" data-src="/assets/img/service-foreign-loov.jpg" alt="">
+												<img class="lazyload" src="/assets/img/service-foreign-loov.jpg" alt="">
 											</figure>
 										</div>
 									</li>
 								</ul>
 								<div class="business__oversea__imgs">
-									<figure><img class="lazyload" data-src="/assets/img/service-foreign-img-1.jpg" alt=""></figure>
-									<figure><img class="lazyload" data-src="/assets/img/service-foreign-img-2.jpg" alt=""></figure>
+									<figure><img class="lazyload" src="/assets/img/service-foreign-img-1.jpg" alt=""></figure>
+									<figure><img class="lazyload" src="/assets/img/service-foreign-img-2.jpg" alt=""></figure>
 								</div>
 							</section>							
 						</section>
@@ -773,7 +772,7 @@
 				<section class="section__mv">
 					<div class="mask">
 						<figure class="section__mv__img mask__element">
-							<img class="lazyload" data-src="/assets/img/company-img.jpg" data-srcset="/assets/img/_sp/company-img.jpg 468w, /assets/img/company-img.jpg" alt="">
+							<img class="lazyload" src="/assets/img/company-img.jpg" srcset="/assets/img/_sp/company-img.jpg 468w, /assets/img/company-img.jpg" alt="">
 						</figure>
 					</div>
 				</section>
@@ -888,7 +887,7 @@
 									</th>
 									<td>
 										AACD（日本流通自主管理会）会員番号 / R-0100 <br>
-										古物商許可番号　：東京都公安委員会 第306601706935号 <br>
+										古物商許可番号　　東京都公安委員会 第306601706935号 <br>
 										大阪府公安委員会　第621012100382号 <br>
 										特別国際種事業者番号：S-3-13-31346 <br>
 										酒販免許：北税務署 北法第299号
@@ -987,7 +986,7 @@
 									<ul class="areas">
 										<li class="area__detail" id="shop-ginza">
 											<figure class="area__detail__img">
-												<img class="lazyload" data-src="/assets/img/company-shoplist-kanto-ginza.jpg" width="290" alt="">
+												<img class="lazyload" src="/assets/img/company-shoplist-kanto-ginza.jpg" width="290" alt="">
 											</figure>
 											<h5 class="area__detail__index">
 												おたからや 6 銀座店
@@ -1005,11 +1004,11 @@
 												</p>
 												<p>
 													【アクセス】<br>
-													地下鉄 銀座駅 C2出口から徒歩 約3分／ＪＲ線 有楽町駅 銀座口から徒歩約4分／ＪＲ線 新橋駅から徒歩 約７分
+													地下鉄 銀座駅 C2出口から徒歩 約3分／ＪＲ線 有楽町駅 銀座口から徒歩約4分／ＪＲ線 新橋駅から徒歩 約７分 <br>
+													<span class="area__detail__link">
+														<a href="https://www.google.co.jp/maps/place/%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%89%E3%82%84%EF%BC%96%E9%8A%80%E5%BA%A7%E5%BA%97/@35.6710166,139.7613868,15z/data=!4m2!3m1!1s0x0:0xb0e071132b3b08da?ved=2ahUKEwi9g-vdw6veAhVFurwKHVw0CusQ_BIwCnoECAsQCw" target="_blank">Google Mapで見る</a>
+													</span>
 												</p>
-												<div class="area__detail__link">
-													<a href="https://www.google.co.jp/maps/place/%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%89%E3%82%84%EF%BC%96%E9%8A%80%E5%BA%A7%E5%BA%97/@35.6710166,139.7613868,15z/data=!4m2!3m1!1s0x0:0xb0e071132b3b08da?ved=2ahUKEwi9g-vdw6veAhVFurwKHVw0CusQ_BIwCnoECAsQCw" target="_blank">Google Mapで見る</a>
-												</div>
 												<p>
 													東京都公安委員会 第306601706935号 株式会社　水野<br>
 													特別国際種事業者番号：S-5-27-00258　酒販免許：北税務署 北法第299号<br>
@@ -1019,7 +1018,7 @@
 										</li>
 										<li class="area__detail" id="shop-ueno">
 											<figure class="area__detail__img">
-												<img class="lazyload" data-src="/assets/img/company-shoplist-kanto-ueno.jpg" width="290" alt="">
+												<img class="lazyload" src="/assets/img/company-shoplist-kanto-ueno.jpg" width="290" alt="">
 											</figure>
 											<h5 class="area__detail__index">
 												おたからや 上野御徒町店
@@ -1038,11 +1037,11 @@
 												</p>
 												<p>
 													【アクセス】<br>
-													JR 御徒町駅より徒歩１分／地下鉄 大江戸線 上野御徒町駅より徒歩１分／地下鉄 日比谷線 仲御徒町駅より徒歩１分／地下鉄 銀座線 上野広小路駅より徒歩１分
+													JR 御徒町駅より徒歩１分／地下鉄 大江戸線 上野御徒町駅より徒歩１分／地下鉄 日比谷線 仲御徒町駅より徒歩１分／地下鉄 銀座線 上野広小路駅より徒歩１分 <br>
+													<span class="area__detail__link">
+														<a href="https://www.google.co.jp/maps/place/%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%89%E3%82%84+%E4%B8%8A%E9%87%8E%E5%BE%A1%E5%BE%92%E7%94%BA%E5%BA%97/@35.7070265,139.7728787,17z/data=!3m1!4b1!4m5!3m4!1s0x60188ea036b7dd25:0x369795c9794342f6!8m2!3d35.7070265!4d139.7750674" target="_blank">Google Mapで見る</a>
+													</span>
 												</p>
-												<div class="area__detail__link">
-													<a href="https://www.google.co.jp/maps/place/%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%89%E3%82%84+%E4%B8%8A%E9%87%8E%E5%BE%A1%E5%BE%92%E7%94%BA%E5%BA%97/@35.7070265,139.7728787,17z/data=!3m1!4b1!4m5!3m4!1s0x60188ea036b7dd25:0x369795c9794342f6!8m2!3d35.7070265!4d139.7750674" target="_blank">Google Mapで見る</a>
-												</div>
 												<p>
 													東京都公安委員会 第306601706935号　株式会社水野 <br>
 													特別国際種事業者番号：S-3-13-31346 <br>
@@ -1061,7 +1060,7 @@
 									<ul class="areas">
 										<li class="area__detail" id="shop-umeda">
 											<figure class="area__detail__img">
-												<img class="lazyload" data-src="/assets/img/company-shoplist-kanto-umeda.jpg" width="290" alt="">
+												<img class="lazyload" src="/assets/img/company-shoplist-kanto-umeda.jpg" width="290" alt="">
 											</figure>
 											<h5 class="area__detail__index">
 												おたからや 梅田店
@@ -1081,11 +1080,11 @@
 												</p>
 												<p>
 													【アクセス】<br>
-													泉の広場Ｍ10出口 徒歩３分／阪急線 梅田駅 徒歩８分／地下鉄御堂筋線 梅田駅 徒歩８分／地下鉄谷町線 東梅田駅 徒歩５分／JR大阪駅 御堂筋口    徒歩１０分
+													泉の広場Ｍ10出口 徒歩３分／阪急線 梅田駅 徒歩８分／地下鉄御堂筋線 梅田駅 徒歩８分／地下鉄谷町線 東梅田駅 徒歩５分／JR大阪駅 御堂筋口    徒歩１０分 <br>
+													<span class="area__detail__link">
+														<a href="https://www.google.co.jp/maps/place/%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%89%E3%82%84%E6%A2%85%E7%94%B0%E5%BA%97/@34.7025629,135.5021176,17z/data=!3m1!4b1!4m5!3m4!1s0x6000e6eb062ef543:0x7a1a9480952dbcf3!8m2!3d34.7025629!4d135.5043063" target="_blank">Google Mapで見る</a>
+													</span>
 												</p>
-												<div class="area__detail__link">
-													<a href="https://www.google.co.jp/maps/place/%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%89%E3%82%84%E6%A2%85%E7%94%B0%E5%BA%97/@34.7025629,135.5021176,17z/data=!3m1!4b1!4m5!3m4!1s0x6000e6eb062ef543:0x7a1a9480952dbcf3!8m2!3d34.7025629!4d135.5043063" target="_blank">Google Mapで見る</a>
-												</div>
 												<p>
 													大阪府公安委員会　第621012100382号　株式会社 水野 <br>
 													特別国際種事業者番号：S-5-27-00258　酒販免許：北税務署 北法第299号 <br>
@@ -1095,7 +1094,7 @@
 										</li>
 										<li class="area__detail" id="shop-shinsaibashi">
 											<figure class="area__detail__img">
-												<img class="lazyload" data-src="/assets/img/company-shoplist-kanto-shinsaibashi.jpg" width="290" alt="">
+												<img class="lazyload" src="/assets/img/company-shoplist-kanto-shinsaibashi.jpg" width="290" alt="">
 											</figure>
 											<h5 class="area__detail__index">
 												おたからや 心斎橋店
@@ -1114,11 +1113,11 @@
 												</p>
 												<p>
 													【アクセス】<br>
-													地下鉄堺筋線 長堀橋駅 徒歩2分／地下鉄御堂筋線 心斎橋駅 徒歩5分／地下街クリスタ長堀南５番エレベータ出口 徒歩30秒
+													地下鉄堺筋線 長堀橋駅 徒歩2分／地下鉄御堂筋線 心斎橋駅 徒歩5分／地下街クリスタ長堀南５番エレベータ出口 徒歩30秒 <br>
+													<span class="area__detail__link">
+														<a href="https://www.google.co.jp/maps/place/%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%89%E3%82%84+%E5%BF%83%E6%96%8E%E6%A9%8B%E5%BA%97/@34.674846,135.5024233,17z/data=!3m1!4b1!4m5!3m4!1s0x6000e717b21329af:0x6f545a0088910f00!8m2!3d34.674846!4d135.504612" target="_blank">Google Mapで見る</a>
+													</span>
 												</p>
-												<div class="area__detail__link">
-													<a href="https://www.google.co.jp/maps/place/%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%89%E3%82%84+%E5%BF%83%E6%96%8E%E6%A9%8B%E5%BA%97/@34.674846,135.5024233,17z/data=!3m1!4b1!4m5!3m4!1s0x6000e717b21329af:0x6f545a0088910f00!8m2!3d34.674846!4d135.504612" target="_blank">Google Mapで見る</a>
-												</div>
 												<p>
 													大阪府公安委員会　第621012100382号　株式会社 水野 <br>
 													特別国際種事業者番号：S-5-27-00258　酒販免許：北税務署 北法第299号 <br>

@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import 'slick-carousel';
 
-import 'lazysizes/lazysizes.min';
-import 'lazysizes/plugins/print/ls.print.min';
+// import 'lazysizes/lazysizes.min';
+// import 'lazysizes/plugins/print/ls.print.min';
 
 
 let $w = $(window),
@@ -95,7 +95,9 @@ let $loadingAnim = $('.loadingAnim');
 if ($loadingAnim.length ) {
 	new Promise(( resolve ) => {
 		window.addEventListener('load', () =>{
-			document.body.classList.add('-is-ready');
+			// document.body.classList.add('-is-ready');
+			document.body.classList.add('-is-loaded');
+
 		})
 		resolve( );
 	}).then(( resolve ) => {
