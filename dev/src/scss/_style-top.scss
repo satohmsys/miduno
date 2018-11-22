@@ -12,8 +12,8 @@
 
 .section{
     & + .section{
-        padding-top: 50px;
-        margin-top: 50px;
+        padding-top: 70px;
+        margin-top: 30px;
 
         @include mq( sp ){
             padding-top: 50px;
@@ -216,6 +216,8 @@ main .wrap{
 
         @include mq( sp ){
             font-size: 2.2rem;
+            top: 10%;
+            height: 90%;
         }
 
     }
@@ -253,7 +255,7 @@ main .wrap{
         bottom: 25vw;
 
         @include mq( sp ){
-            bottom: 25vw;
+            bottom: 15vw;
         }
 
 
@@ -295,9 +297,9 @@ main .wrap{
         bottom: 10vw;
     	text-align: center;
 
-        @include mq( tab,min ){
+        // @include mq( tab,min ){
             display: none;
-        }
+        // }
 
         @include mq( sp ){
             bottom: 35vw;
