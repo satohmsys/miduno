@@ -29,7 +29,7 @@
         font-size: $fontsize_xl_en;
         font-weight: bold;
         font-family: $fontFamily_en;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.05em;
         line-height: 1;
 
         @include mq( sp ){
@@ -40,7 +40,7 @@
         &:after{
             content:" ";
             width: 100%;
-            margin-top: 40px;
+            margin-top: 20px;
             height: 600px;
             display: block;
             transition: transition();
@@ -62,7 +62,7 @@
         margin-left: auto;
         position: relative;
         z-index: 1;
-        margin-top: -590px;
+        margin-top: -610px;
 
         @include mq( tab ){
             margin-top: -265px;

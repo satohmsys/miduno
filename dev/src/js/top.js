@@ -4,7 +4,7 @@ import '@fancyapps/fancybox';
 var $hh = $('.siteHeader').outerHeight();
 
 
-$('.business__movie__play' ).fancybox({
+$('.business__movie' ).fancybox({
 	src: 'https://youtu.be/Gp0g92Hd0qU'
 });
 
