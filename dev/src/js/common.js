@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import 'slick-carousel';
 
 // import 'lazysizes/lazysizes.min';
 // import 'lazysizes/plugins/print/ls.print.min';
@@ -86,73 +85,6 @@ let f2 = ($scrollVal) => {
 
 getScrollVal(f2);
 
-
-/**
- * loading
- */
-let $loadingAnim = $('.loadingAnim');
-
-if ($loadingAnim.length ) {
-	new Promise(( resolve ) => {
-		window.addEventListener('load', () =>{
-			// document.body.classList.add('-is-ready');
-			document.body.classList.add('-is-loaded');
-
-		})
-		resolve( );
-	}).then(( resolve ) => {
-		document.querySelector('.loadingAnim .mask__element').addEventListener('transitionend', ( e ) => {
-			e.stopPropagation();
-			document.body.classList.add('-is-loaded');
-		});
-	}).then(( resolve ) => {
-		document.getElementsByClassName('loadingAnim')[0].addEventListener('transitionend', (e) => {
-			e.stopPropagation();
-			if (e.propertyName == 'transform'){
-				setTimeout(() => {
-					$loadingAnim.remove();
-				}, 500); 
-			}
-			document.body.classList.add('-is-loadend');
-		
-			$('.mv__imgs').slick({
-				arrows: false,
-				autoplay: true,
-				autoplaySpeed: 4500,
-				dots: true,
-				pauseOnFocus: false,
-				pauseOnHover: false,
-				pauseOnDotsHover: false,
-				infinite: true,
-				fade: true,
-				pause: 4500,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				speed: 1000,
-			});
-		});
-	});
-
-	// if ($loadingAnim.length) {
-	// 	$w.on('load', function () {
-	// 		$('body').addClass('-is-ready');
-
-	// 		$('.loadingAnim .mask__element').on('transitionend', function (e) {
-	// 			e.stopPropagation();
-	// 			e.preventDefault();
-
-	// 			$('body').addClass('-is-loaded');
-
-	// 			$('.loadingAnim').on('transitionend', function (e) {
-	// 				e.stopPropagation();
-	// 				$('body').addClass('-is-loadend');
-	// 				// $loadingAnim.remove();
-	// 			});
-	// 		});
-	// 	});
-	// }
-
-}
 
 /**
  * smooth scroll

@@ -113,6 +113,11 @@ let config = {
 	// },
 
 	plugins: [
+       new webpack.ProvidePlugin({
+       	$: 'jquery',
+       	jQuery: 'jquery',
+       	'window.jQuery': 'jquery'
+       }),
 		new ExtractTextPlugin({
 			filename: vars.PATHS.dir.output + '/css/style.css',
 			allChunks: true
