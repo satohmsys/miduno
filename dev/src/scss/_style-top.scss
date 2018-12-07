@@ -1536,9 +1536,13 @@ main .wrap{
                     padding-bottom: 20px;
                 }
                 th{
-                    width: 80px;
+                    width: 100px;
                     border-color: $navy;
                     vertical-align: top;
+
+                    @include mq(tab) {
+                      width: 80px;
+                    }
                 }
 
                 td p:first-child{

@@ -94,11 +94,11 @@ $('a[href^="#"]').click(function ( e ) {
 	e.preventDefault();
 
 	var speed = 500,
-		href = $(this).attr("href"),
-		target = $(href == "#" || href == "" ? 'html' : href),
-		position = target.offset().top - $('.siteHeader' ).height();
+      href = $(this).attr("href"),
+      target = $(href == "#" || href == "" ? 'html' : href),
+      position = target.offset().top - $('.siteHeader' ).height();
 
-	$("html, body").animate({ scrollTop: position }, speed, "swing");
+	$("html, body").removeClass('-is-navOpen').animate({ scrollTop: position }, speed, "swing");
 	return false;
 });
 $( '.scrollTop' ).on( 'click', function( e ){
