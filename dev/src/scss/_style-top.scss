@@ -707,15 +707,23 @@ main .wrap{
             &__images{
                 display: flex;
 
-                figure:first-child{
+                figure{
+                  width: 190px;
+
+                  &:not( :last-child ){
                     margin-right: 20px;
+                  }
                 }
 
                 @include mq( sp ){
                     margin-top: 20px;
 
-                    figure:first-child{
-                        margin-right: 10px;
+                    figure {
+                      width: 32%;
+
+                      &:not( :last-child) {
+                        margin-right: 2%;
+                      }
                     }
                 }                 
             }
