@@ -50,6 +50,6 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
-    "lazysizes": "^4.1.4"
+    "lazysizes": "^5.2.1"
   }
 }
